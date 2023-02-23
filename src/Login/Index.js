@@ -12,7 +12,12 @@ const Index = () => {
                 <button>Register</button>    
             </div>
             <div className="right">
-                
+                <h1>Login</h1>
+                <form>
+                    <input type="text" placeholder="User name"/>
+                    <input type="password" placeholder="Password"/>
+                    <button>Login</button>
+                </form>
         </div>
       Hello World
     </div>
