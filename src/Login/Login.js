@@ -1,6 +1,6 @@
-import "./Index.scss";
+import "./Login.scss";
 
-const Index = () => {
+const Login = () => {
   return (
     <div className="login">
       <div className="card">
@@ -22,9 +22,8 @@ const Index = () => {
           <button>Login</button>
         </form>
       </div>
-      Hello World
     </div>
   );
 };
 
-export default Index;
+export default Login;
