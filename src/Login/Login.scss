@@ -1,11 +1,22 @@
-.loign {
+.login {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(132, 132, 202);
+  background: rgb(132, 132, 202);
+
   .card {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    min-height: 500px;
+
     .left {
+      flex: 1;
+      background: url('https://images.pexels.com/photos/7741762/pexels-photo-7741762.jpeg?auto=compress&cs=tinysrgb&w=400');
+      background-position: center;
+      background-size: cover;
+
       h1 {
       }
       p {
@@ -18,12 +29,18 @@
     }
 
     .right {
+      flex: 1;
+
       h1{
 
       }
 
       form{
+        display: flex;
+        flex-direction: column;
+
         input{
+          display: block;
 
         }
         button{

@@ -5,7 +5,7 @@ const Login = () => {
     <div className="login">
       <div className="card">
         <div className="left">
-          <h1>Jess Talk</h1>
+          <h1>J Talk</h1>
           <p>
             Welcome to Jess talk and share your photos, ideas, and videos with
             others
