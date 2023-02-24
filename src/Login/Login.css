@@ -17,6 +17,11 @@
   flex: 1;
   background: linear-gradient(rgba(39, 11, 96, 0.3), rgba(39, 11, 96, 0.8)), url("https://images.pexels.com/photos/7741762/pexels-photo-7741762.jpeg?auto=compress&cs=tinysrgb&w=400") center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: #fff;
+  align-items: center;
 }
 .login .card .right {
   flex: 1;
