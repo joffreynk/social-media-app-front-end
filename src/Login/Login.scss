@@ -80,8 +80,17 @@
           border: none;
           border-bottom: 1px solid lightgray;
           padding-bottom: 0.5rem;
+          font-size: 1.15rem;
+          outline: none;
 
         }
+
+        input:focus {
+          border: none;
+          border-bottom: 1px solid lightgray;
+
+        }
+        
         button{
           font-size: 2rem;
           font-weight: bold;
