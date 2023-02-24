@@ -5,7 +5,7 @@ import Login from './login&register/Login';
 function App() {
   return (
     <div className="App">
-     <Login />
+     {/* <Login /> */}
 
      <Register />
     </div>

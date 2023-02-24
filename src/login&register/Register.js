@@ -11,7 +11,7 @@ const Register = () => {
             Welcome to J Talk and share your photos, ideas, and videos with
             others
           </p>
-          <span>Don't you have account?</span>
+          <span>Do you have an account?</span>
           <button>Login</button>
         </div>
         <div className="right">

@@ -11,7 +11,7 @@ const Login = () => {
             Welcome to J Talk and share your photos, ideas, and videos with
             others
           </p>
-          <span>Don't you have account?</span>
+          <span>Don't you have an account?</span>
           <button>Register</button>
         </div>
         <div className="right">
