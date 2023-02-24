@@ -1,0 +1,106 @@
+.login-register {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(132, 132, 202);
+}
+.login-register .card {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  min-height: 500px;
+  background: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.login-register .card .left {
+  flex: 1;
+  background: linear-gradient(rgba(39, 11, 96, 0.3), rgba(39, 11, 96, 0.8)), url("https://images.pexels.com/photos/7741762/pexels-photo-7741762.jpeg?auto=compress&cs=tinysrgb&w=400") center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fff;
+  align-items: center;
+  padding-left: 0.75rem;
+  line-height: 120%;
+}
+.login-register .card .left h1 {
+  font-size: 4rem;
+}
+.login-register .card .left p {
+  font-size: 1.15rem;
+}
+.login-register .card .left span {
+  align-self: flex-start;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  margin-bottom: -25px;
+}
+.login-register .card .left button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border-radius: 7px;
+  border: none;
+}
+.login-register .card .left button:hover {
+  color: #fff;
+  background: rgb(132, 132, 202);
+  cursor: pointer;
+}
+.login-register .card .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 0.75rem;
+  line-height: 120%;
+}
+.login-register .card .right h1 {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  color: rgb(132, 132, 202);
+  gap: 2rem;
+}
+.login-register .card .right h1 span {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(132, 132, 202);
+}
+.login-register .card .right form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 0.75rem;
+  line-height: 120%;
+}
+.login-register .card .right form input {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 0.5rem;
+  font-size: 1.15rem;
+  outline: none;
+  color: rgb(132, 132, 202);
+}
+.login-register .card .right form input:focus {
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+.login-register .card .right form button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border-radius: 7px;
+  border: none;
+  background: rgb(132, 132, 202);
+}
+.login-register .card .right form button:hover {
+  color: rgb(132, 132, 202);
+  background: #818080;
+  cursor: pointer;
+  color: #fff;
+}/*# sourceMappingURL=login&register.css.map */

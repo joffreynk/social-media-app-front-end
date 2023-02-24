@@ -1,9 +1,10 @@
-import "./Login.css";
+import "./login&register.css";
+import "./Register.css";
 
-const Login = () => {
+const Register = () => {
   return (
-    <div className="login">
-      <div className="card">
+    <div className="login-register">
+      <div className="card register-card">
         <div className="left">
           <h1>J Talk</h1>
           <p>
@@ -11,14 +12,19 @@ const Login = () => {
             others
           </p>
           <span>Don't you have account?</span>
-          <button>Register</button>
+          <button>Login</button>
         </div>
         <div className="right">
-          <h1>Login <span></span> </h1>
-          <form>
+          <h1>Register <span></span> </h1>
+          <form className="register-form">
+            <input type="text" placeholder="User name" />
+            <input type="text" placeholder="User name" />
+            <input type="text" placeholder="User name" />
+            <input type="text" placeholder="User name" />
+            <input type="text" placeholder="User name" />
             <input type="text" placeholder="User name" />
             <input type="password" placeholder="Password" />
-            <button>Login</button>
+            <button>Register</button>
           </form>
         </div>
       </div>
@@ -26,4 +32,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

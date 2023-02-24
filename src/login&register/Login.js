@@ -1,8 +1,9 @@
+import "./login&register.css";
 import "./Login.css";
 
 const Login = () => {
   return (
-    <div className="login">
+    <div className="login-register">
       <div className="card">
         <div className="left">
           <h1>J Talk</h1>
