@@ -11,7 +11,8 @@
   width: 50%;
   min-height: 500px;
   background: #fff;
-  border-radius: 2rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
 }
 .login .card .left {
   flex: 1;
@@ -50,7 +51,6 @@
   cursor: pointer;
 }
 .login .card .right {
-  padding-top: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -62,8 +62,9 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  font-size: 4rem;
   color: rgb(132, 132, 202);
+  gap: 2rem;
 }
 .login .card .right h1 span {
   width: 100%;
