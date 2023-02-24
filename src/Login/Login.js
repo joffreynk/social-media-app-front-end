@@ -7,7 +7,7 @@ const Login = () => {
         <div className="left">
           <h1>J Talk</h1>
           <p>
-            Welcome to Jess talk and share your photos, ideas, and videos with
+            Welcome to J Talk and share your photos, ideas, and videos with
             others
           </p>
           <span>Don't you have account?</span>
