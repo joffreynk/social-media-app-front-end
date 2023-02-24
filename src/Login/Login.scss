@@ -50,28 +50,50 @@
 
       button:hover  {
         color: #fff;
-        background-color: #000;
+        background: rgb(132, 132, 202);
         cursor: pointer;
       }
     }
 
     .right {
+      padding-top: 1.5rem;
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding-left: 0.75rem;
+      line-height: 120%;
 
       h1{
+        align-self: center;
 
       }
 
       form{
         display: flex;
         flex-direction: column;
+        gap: 2rem;
+        padding: 0 0.75rem;
+        line-height: 120%;
 
         input{
+          border: none;
 
         }
         button{
-
+          font-size: 2rem;
+          font-weight: bold;
+          padding: 0.5rem 2rem;
+          border-radius: 7px;
+          border: none;
+          background: rgb(132, 132, 202);
         }
+        button:hover  {
+          color: rgb(132, 132, 202);
+          background: #fff;
+          cursor: pointer;
+        }
+
       }
 
     }

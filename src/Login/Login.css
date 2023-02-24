@@ -46,13 +46,41 @@
 }
 .login .card .left button:hover {
   color: #fff;
-  background-color: #000;
+  background: rgb(132, 132, 202);
   cursor: pointer;
 }
 .login .card .right {
+  padding-top: 1.5rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 0.75rem;
+  line-height: 120%;
+}
+.login .card .right h1 {
+  align-self: center;
 }
 .login .card .right form {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  padding: 0 0.75rem;
+  line-height: 120%;
+}
+.login .card .right form input {
+  border: none;
+}
+.login .card .right form button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border-radius: 7px;
+  border: none;
+  background: rgb(132, 132, 202);
+}
+.login .card .right form button:hover {
+  color: rgb(132, 132, 202);
+  background: #fff;
+  cursor: pointer;
 }/*# sourceMappingURL=Login.css.map */
