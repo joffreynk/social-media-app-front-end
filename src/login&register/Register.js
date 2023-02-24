@@ -14,7 +14,7 @@ const Register = () => {
             others
           </p>
           <span>Do you have an account?</span>
-          <Link to="/">
+          <Link to="/login">
             <button>Login</button>
           </Link>
         </div>
