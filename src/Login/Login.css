@@ -63,6 +63,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  color: rgb(132, 132, 202);
 }
 .login .card .right h1 span {
   width: 100%;
@@ -98,6 +99,7 @@
 }
 .login .card .right form button:hover {
   color: rgb(132, 132, 202);
-  background: #fff;
+  background: #818080;
   cursor: pointer;
+  color: #fff;
 }/*# sourceMappingURL=Login.css.map */
