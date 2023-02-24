@@ -70,6 +70,8 @@
 }
 .login .card .right form input {
   border: none;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 0.5rem;
 }
 .login .card .right form button {
   font-size: 2rem;
