@@ -38,7 +38,19 @@
         font-size: 0.9rem;
 
       }
+
       button {
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 0.5rem 2rem;
+        border-radius: 7px;
+        border: none;
+      }
+
+      button:hover  {
+        color: #fff;
+        background-color: #000;
+        cursor: pointer;
       }
     }
 

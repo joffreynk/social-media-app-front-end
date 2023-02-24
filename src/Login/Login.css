@@ -36,6 +36,18 @@
   padding-left: 1.25rem;
   font-size: 0.9rem;
 }
+.login .card .left button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border-radius: 7px;
+  border: none;
+}
+.login .card .left button:hover {
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
 .login .card .right {
   flex: 1;
 }
