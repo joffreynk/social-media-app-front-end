@@ -19,17 +19,21 @@
       background-size: cover;
       display: flex;
       flex-direction: column;
-      gap: 50px;
+      gap: 2rem;
       color: #fff;
       align-items: center;
-
+      padding: 0.75rem;
+      line-height: 120%;
 
       h1 {
+        font-size: 4rem;
       }
       p {
       }
 
       span {
+        align-self: flex-start;
+
       }
       button {
       }
