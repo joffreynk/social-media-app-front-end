@@ -7,17 +7,19 @@ import Home from './Home/Home';
 import Profile from './Profile/Profile';
 
 function App() {
-  const user  = false;
-
-  const protectedRoutes = ({children}) => {
-    if(!user) return <Navigate to="/login" />;
-
+  const currentUser  = false;
+  
+  const ProtectedRoutes = ({children}) => {
+    if(currentUser) return <Navigate to="/login" />;
+  
     return children
   }
+
+
   return (
     <Router className="">
       <Routes>
-        <Route path="/" element={<protectedRoutes> <Layout /></protectedRoutes>}>
+        <Route path="/" element={<ProtectedRoutes> <Layout /></ProtectedRoutes>}>
           <Route index element={<Home />} />
           <Route path="/profile/:id" element={<Profile/>} />
         </Route>
