@@ -60,6 +60,14 @@
 }
 .login .card .right h1 {
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.login .card .right h1 span {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(132, 132, 202);
 }
 .login .card .right form {
   display: flex;
@@ -74,6 +82,7 @@
   padding-bottom: 0.5rem;
   font-size: 1.15rem;
   outline: none;
+  color: rgb(132, 132, 202);
 }
 .login .card .right form input:focus {
   border: none;
