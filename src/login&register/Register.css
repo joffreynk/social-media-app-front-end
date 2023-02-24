@@ -1,3 +1,13 @@
 .register-card {
   flex-direction: row-reverse;
+}
+.register-card .right {
+  gap: 0.75rem;
+}
+.register-card .right h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.register-card .right form {
+  gap: 0.5rem;
 }/*# sourceMappingURL=Register.css.map */

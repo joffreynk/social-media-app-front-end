@@ -1,7 +1,20 @@
 .register-card{
     flex-direction: row-reverse;
 
-    .left {
-        
+    .right {
+        gap: 0.75rem;
+
+
+        h1{
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+
+        form{
+          gap: 0.5rem;
+
+        }
+
+
     }
 }
