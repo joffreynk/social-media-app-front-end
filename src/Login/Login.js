@@ -1,4 +1,4 @@
-import "./Login.scss";
+import "./Login.css";
 
 const Login = () => {
   return (
@@ -13,14 +13,14 @@ const Login = () => {
           <span>Don't you have account?</span>
           <button>Register</button>
         </div>
-      </div>
-      <div className="right">
-        <h1>Login</h1>
-        <form>
-          <input type="text" placeholder="User name" />
-          <input type="password" placeholder="Password" />
-          <button>Login</button>
-        </form>
+        <div className="right">
+          <h1>Login</h1>
+          <form>
+            <input type="text" placeholder="User name" />
+            <input type="password" placeholder="Password" />
+            <button>Login</button>
+          </form>
+        </div>
       </div>
     </div>
   );

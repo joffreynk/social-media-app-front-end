@@ -10,11 +10,12 @@
     justify-content: center;
     width: 50%;
     min-height: 500px;
+    background: #fff;
+    border-radius: 2rem;
 
     .left {
       flex: 1;
-      background: url('https://images.pexels.com/photos/7741762/pexels-photo-7741762.jpeg?auto=compress&cs=tinysrgb&w=400');
-      background-position: center;
+      background: linear-gradient(rgba(39, 11, 96,0.3), rgba(39, 11, 96, 0.8)) ,url('https://images.pexels.com/photos/7741762/pexels-photo-7741762.jpeg?auto=compress&cs=tinysrgb&w=400') center;
       background-size: cover;
 
       h1 {
@@ -40,7 +41,6 @@
         flex-direction: column;
 
         input{
-          display: block;
 
         }
         button{
