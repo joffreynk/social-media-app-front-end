@@ -12,7 +12,10 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 
 const HeaderBar = () => {
   return (
-    <div>HeaderBar</div>
+    <div>
+      <div className='left'> </div>
+      <div className='right'></div>
+    </div>
   )
 }
 
