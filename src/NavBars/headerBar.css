@@ -12,6 +12,10 @@
   -moz-column-gap: 3px;
        column-gap: 3px;
 }
+.header-bar .left .logo {
+  text-decoration: none;
+  color: black;
+}
 .header-bar .left .search {
   display: flex;
   align-items: center;
@@ -40,4 +44,9 @@
   -moz-column-gap: 3px;
        column-gap: 3px;
   align-items: center;
+}
+.header-bar .right .prof-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }/*# sourceMappingURL=headerBar.css.map */

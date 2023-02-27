@@ -10,15 +10,15 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 
+import passportImage from '../images/passport.png'
+
 import './headerBar.css'
 
 const HeaderBar = () => {
   return (
     <div className='header-bar'>
       <div className='left'>
-        <span>
-        <Link>J Talk</Link>
-        </span>
+        <Link  className='logo'>J Talk</Link>
         <HomeOutlinedIcon />
         <DarkModeOutlinedIcon />
         <GridViewOutlinedIcon />
@@ -32,7 +32,7 @@ const HeaderBar = () => {
         <MailOutlineOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className='prof-icon'>
-          {/* <img src='' alt='' /> */}
+          <img src={passportImage} alt='passport  picture' />
           <span>JOffreynk</span>
         </div>
       </div>
