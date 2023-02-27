@@ -9,8 +9,8 @@
 .header-bar .left {
   display: flex;
   align-items: center;
-  -moz-column-gap: 3px;
-       column-gap: 3px;
+  -moz-column-gap: 6 px;
+       column-gap: 6 px;
 }
 .header-bar .left .logo {
   text-decoration: none;
