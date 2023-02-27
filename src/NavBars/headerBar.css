@@ -38,15 +38,19 @@
   align-items: center;
   -moz-column-gap: 3px;
        column-gap: 3px;
+  gap: 10px;
 }
 .header-bar .right .prof-icon {
   display: flex;
   -moz-column-gap: 3px;
        column-gap: 3px;
   align-items: center;
+  gap: 10px;
 }
 .header-bar .right .prof-icon img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=headerBar.css.map */
