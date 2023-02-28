@@ -35,28 +35,14 @@ const LeftBar = () => {
         <img src={courses} alt='courses picture' />
         <span>courses</span>
       </div>
-      <div className='event'>
-        <img src={event} alt='event picture' />
-        <span>event</span>
+      <div className='tutorial'>
+        <img src={tutorial} alt='tutorial picture' />
+        <span>tutorial</span>
       </div>
-      <div className='event'>
-        <img src={event} alt='event picture' />
-        <span>event</span>
+      <div className='video'>
+        <img src={video} alt='video picture' />
+        <span>video</span>
       </div>
-      <div className='event'>
-        <img src={event} alt='event picture' />
-        <span>event</span>
-      </div>
-      <div className='event'>
-        <img src={event} alt='event picture' />
-        <span>event</span>
-      </div>
-      <div className='event'>
-        <img src={event} alt='event picture' />
-        <span>event</span>
-      </div>
-
-      
     </div>
   )
 }
