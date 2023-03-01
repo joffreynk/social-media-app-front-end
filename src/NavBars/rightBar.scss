@@ -34,8 +34,25 @@
             height: 40px;
             border-radius: 50%;
             object-fit: cover;
+            text-align: center;
           }
 
+        }
+
+        .user-buttons {
+          display: contents;
+          align-items: center;
+          gap: 0.25rem;
+          padding: 2px 4px;
+          
+          &:first-child {
+            border: none;
+            background-color: #1075d4;
+          }
+
+          &:last-child {
+            background-color: #f30202;
+          }
         }
 
 

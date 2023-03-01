@@ -34,4 +34,18 @@
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  text-align: center;
+}
+.rightBar .container .item .user .user-buttons {
+  display: contents;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 2px 4px;
+}
+.rightBar .container .item .user .user-buttons:first-child {
+  border: none;
+  background-color: #1075d4;
+}
+.rightBar .container .item .user .user-buttons:last-child {
+  background-color: #f30202;
 }/*# sourceMappingURL=rightBar.css.map */
