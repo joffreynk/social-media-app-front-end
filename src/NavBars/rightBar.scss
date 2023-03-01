@@ -1,3 +1,18 @@
 .rightBar{
   flex: 2;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 71px;
+  height: calc(100vh - 71px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 10px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar {
+    display: none;
+  }
+
+  
 }
