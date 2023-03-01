@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './rightBar.css'
+
 import passportImage from '../images/passport.png'
 
 const RightBar = () => {

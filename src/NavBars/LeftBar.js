@@ -15,36 +15,36 @@ const LeftBar = () => {
     <div className='left-bar'>
       <div className='container'>
         <div className='user'>
-        <img src={passportImage} alt='passport  picture' />
+        <img src={passportImage} alt='passport  profile' />
         <span>JOffreynk</span>
         </div>
 
         <div className='item event'>
-          <img src={event} alt='event picture' />
+          <img src={event} alt='event profile' />
           <span>event</span>
         </div>
         <div className='item game'>
-          <img src={game} alt='game picture' />
+          <img src={game} alt='game profile' />
           <span>game</span>
         </div>
         <div className='item funds'>
-          <img src={marketPlace} alt='marketPlace picture' />
+          <img src={marketPlace} alt='marketPlace profile' />
           <span>marketPlace</span>
         </div>
         <div className='item marketPlace'>
-          <img src={funds} alt='funds picture' />
+          <img src={funds} alt='funds profile' />
           <span>funds</span>
         </div>
         <div className='item courses'>
-          <img src={courses} alt='courses picture' />
+          <img src={courses} alt='courses profile' />
           <span>courses</span>
         </div>
         <div className='item tutorial'>
-          <img src={tutorial} alt='tutorial picture' />
+          <img src={tutorial} alt='tutorial profile' />
           <span>tutorial</span>
         </div>
         <div className='item video'>
-          <img src={video} alt='video picture' />
+          <img src={video} alt='video profile' />
           <span>video</span>
         </div>
 
@@ -53,31 +53,31 @@ const LeftBar = () => {
         <p>your shortcuts</p>
 
         <div className='item event'>
-          <img src={event} alt='event picture' />
+          <img src={event} alt='event profile' />
           <span>event</span>
         </div>
         <div className='item game'>
-          <img src={game} alt='game picture' />
+          <img src={game} alt='game profile' />
           <span>game</span>
         </div>
         <div className='item funds'>
-          <img src={marketPlace} alt='marketPlace picture' />
+          <img src={marketPlace} alt='marketPlace profile' />
           <span>marketPlace</span>
         </div>
         <div className='item marketPlace'>
-          <img src={funds} alt='funds picture' />
+          <img src={funds} alt='funds profile' />
           <span>funds</span>
         </div>
         <div className='item courses'>
-          <img src={courses} alt='courses picture' />
+          <img src={courses} alt='courses profile' />
           <span>courses</span>
         </div>
         <div className='item tutorial'>
-          <img src={tutorial} alt='tutorial picture' />
+          <img src={tutorial} alt='tutorial profile' />
           <span>tutorial</span>
         </div>
         <div className='item video'>
-          <img src={video} alt='video picture' />
+          <img src={video} alt='video profile' />
           <span>video</span>
         </div>
 
@@ -86,23 +86,23 @@ const LeftBar = () => {
         <p>Others</p>
 
         <div className='item event'>
-          <img src={event} alt='event picture' />
+          <img src={event} alt='event profile' />
           <span>event</span>
         </div>
         <div className='item game'>
-          <img src={game} alt='game picture' />
+          <img src={game} alt='game profile' />
           <span>game</span>
         </div>
         <div className='item funds'>
-          <img src={marketPlace} alt='marketPlace picture' />
+          <img src={marketPlace} alt='marketPlace profile' />
           <span>marketPlace</span>
         </div>
         <div className='item marketPlace'>
-          <img src={funds} alt='funds picture' />
+          <img src={funds} alt='funds profile' />
           <span>funds</span>
         </div>
         <div className='item courses'>
-          <img src={courses} alt='courses picture' />
+          <img src={courses} alt='courses profile' />
           <span>courses</span>
         </div>
       </div>

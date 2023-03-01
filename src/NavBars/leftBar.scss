@@ -10,9 +10,6 @@
   &::-webkit-scrollbar {
     display: none;
   }
-  scrollbar {
-    display: none;
-  }
 
   .container {
     display: flex;
@@ -58,8 +55,10 @@
     align-items: center;
     gap: 0.4rem;
     cursor: pointer;
+    background-color: #d4c9c9;
+    border: 1px solid #c7bcbc;
 
-    img{
+    img {
       width: 25px;
       height: 25px;
       object-fit: cover;

@@ -11,9 +11,6 @@
 .left-bar::-webkit-scrollbar {
   display: none;
 }
-.left-bar scrollbar {
-  display: none;
-}
 .left-bar .container {
   display: flex;
   flex-direction: column;
@@ -53,6 +50,8 @@
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
+  background-color: #d4c9c9;
+  border: 1px solid #c7bcbc;
 }
 .left-bar .container .item img {
   width: 25px;
