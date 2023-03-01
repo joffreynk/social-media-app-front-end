@@ -1,7 +1,17 @@
 .left-bar {
+  flex: 1.5;
   position: sticky;
+  position: -webkit-sticky;
   top: 71px;
-  height: 100vh-;
+  height: calc(100vh - 71px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.left-bar ::-webkit-scrollbar {
+  display: none;
+}
+.left-bar scrollbar {
+  display: none;
 }
 .left-bar .container {
   display: flex;
