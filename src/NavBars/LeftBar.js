@@ -14,7 +14,6 @@ const LeftBar = () => {
   return (
     <div className='left-bar'>
       <div className='container'>
-
         <div className='menu'>
           <div className='user'>
           <img src={passportImage} alt='passport  picture' />
