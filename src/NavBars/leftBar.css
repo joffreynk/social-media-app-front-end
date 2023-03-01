@@ -1,7 +1,29 @@
-.left-bar .menu .user img {
+.left-bar .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.left-bar .container .user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.left-bar .container .user img {
   width: 30px;
   height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+.left-bar .container .item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.left-bar .container .item img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=leftBar.css.map */

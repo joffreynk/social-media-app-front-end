@@ -1,14 +1,33 @@
 .left-bar {
-  container {
-    * {
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    .user {
       display: flex;
       align-items: center;
+      gap: 0.5rem;
+
       img {
         width: 30px;
         height: 30px;
         object-fit: cover;
         border-radius: 50%;
       }
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img{
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
   }
   }
 }
