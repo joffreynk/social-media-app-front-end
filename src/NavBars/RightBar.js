@@ -13,12 +13,20 @@ const RightBar = () => {
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
             </div>
-            <div>
+            <div className='user-buttons'>
               <button>Follow</button>
               <button>Dismiss</button>
             </div>
-
-
+          </div>
+          <div className='user'>
+            <div className='user-info'>
+              <img src={passportImage} alt='passport' />
+              <span>Joffrey NK</span>
+            </div>
+            <div className='user-buttons'>
+              <button>Follow</button>
+              <button>Dismiss</button>
+            </div>
           </div>
         </div>
 

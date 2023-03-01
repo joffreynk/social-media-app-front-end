@@ -14,5 +14,29 @@
     display: none;
   }
 
-  
+  .container {
+
+    .item {
+      .user {
+        display: flex;
+        flex-direction: column;
+        
+        .user-info {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+
+      }
+    }
+  }
+
+
 }

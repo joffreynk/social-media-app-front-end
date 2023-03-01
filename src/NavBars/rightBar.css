@@ -13,4 +13,19 @@
 }
 .rightBar scrollbar {
   display: none;
+}
+.rightBar .container .item .user {
+  display: flex;
+  flex-direction: column;
+}
+.rightBar .container .item .user .user-info {
+  display: flex;
+  align-items: center;
+}
+.rightBar .container .item .user .user-info img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }/*# sourceMappingURL=rightBar.css.map */
