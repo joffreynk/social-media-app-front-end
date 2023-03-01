@@ -1,12 +1,14 @@
 .left-bar {
-  .menu {
-    .user {
+  container {
+    * {
+      display: flex;
+      align-items: center;
       img {
         width: 30px;
         height: 30px;
         object-fit: cover;
         border-radius: 50%;
       }
-    }
+  }
   }
 }
