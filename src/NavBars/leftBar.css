@@ -2,12 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.45rem;
+}
+.left-bar .container p {
+  padding: 0;
+  margin: 0;
+}
+.left-bar .container hr {
+  margin: 0.3rem 0;
+  padding: 0;
+  height: 0;
+  border: 1px solid lightgray;
 }
 .left-bar .container .user {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.3rem;
 }
 .left-bar .container .user img {
   width: 30px;
@@ -24,7 +34,8 @@
 .left-bar .container .item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  cursor: pointer;
 }
 .left-bar .container .item img {
   width: 25px;

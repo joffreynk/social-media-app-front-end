@@ -47,6 +47,64 @@ const LeftBar = () => {
           <img src={video} alt='video picture' />
           <span>video</span>
         </div>
+
+        <hr />
+
+        <p>your shortcuts</p>
+
+        <div className='item event'>
+          <img src={event} alt='event picture' />
+          <span>event</span>
+        </div>
+        <div className='item game'>
+          <img src={game} alt='game picture' />
+          <span>game</span>
+        </div>
+        <div className='item funds'>
+          <img src={marketPlace} alt='marketPlace picture' />
+          <span>marketPlace</span>
+        </div>
+        <div className='item marketPlace'>
+          <img src={funds} alt='funds picture' />
+          <span>funds</span>
+        </div>
+        <div className='item courses'>
+          <img src={courses} alt='courses picture' />
+          <span>courses</span>
+        </div>
+        <div className='item tutorial'>
+          <img src={tutorial} alt='tutorial picture' />
+          <span>tutorial</span>
+        </div>
+        <div className='item video'>
+          <img src={video} alt='video picture' />
+          <span>video</span>
+        </div>
+
+        <hr />
+
+        <p>Others</p>
+
+        <div className='item event'>
+          <img src={event} alt='event picture' />
+          <span>event</span>
+        </div>
+        <div className='item game'>
+          <img src={game} alt='game picture' />
+          <span>game</span>
+        </div>
+        <div className='item funds'>
+          <img src={marketPlace} alt='marketPlace picture' />
+          <span>marketPlace</span>
+        </div>
+        <div className='item marketPlace'>
+          <img src={funds} alt='funds picture' />
+          <span>funds</span>
+        </div>
+        <div className='item courses'>
+          <img src={courses} alt='courses picture' />
+          <span>courses</span>
+        </div>
       </div>
     </div>
   )
