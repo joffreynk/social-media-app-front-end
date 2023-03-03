@@ -42,10 +42,16 @@
         .user-buttons {
           display: contents;
           align-items: center;
-          row-gap: 0.25rem;
+          justify-content:baseline;
           padding-right: 4px;
 
-          
+          :first-child {
+            background-color: #0d8add;
+          }
+
+          :last-child {
+            background-color: red;
+          }
 
         }
 
