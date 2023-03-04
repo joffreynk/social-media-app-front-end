@@ -18,8 +18,10 @@
 
     .item {
       background-color: #f0ecec;
-      // border: 3px solid #e9dfdf;
-      border-radius: 0.6rem;
+      box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+      -webkit-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+      -moz-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+      border-radius: 2px;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -48,7 +50,7 @@
           gap: 0.5rem;
           padding-right: 4px;
 
-          :first-child {
+         button:first-child {
             background-color: #0d8add;
             border: none;
             padding: 4px 8px;
@@ -57,13 +59,17 @@
             font-size: 16px;
           }
 
-          :last-child {
+          button:last-child {
             background-color: red;
             border: none;
             padding: 4px 8px;
             border-radius: 3px;
             cursor: pointer;
             font-size: 16px;
+          }
+
+          p {
+            font-size: 18px;
           }
 
         }
