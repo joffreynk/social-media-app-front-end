@@ -11,7 +11,8 @@ const Layout = () => {
         <div style={{display:"flex", paddingTop: "0.5rem", backgroundColor:'#f1f1f1'}}>
 
             <LeftBar />
-            <Outlet />
+
+            <Outlet  />
             <RightBar />
         </div>
     </div>
