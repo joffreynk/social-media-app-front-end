@@ -40,17 +40,27 @@
         }
 
         .user-buttons {
-          display: contents;
+          display: flex;
           align-items: center;
-          justify-content:baseline;
+          gap: 0.5rem;
           padding-right: 4px;
 
           :first-child {
             background-color: #0d8add;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
           }
 
           :last-child {
             background-color: red;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
           }
 
         }
