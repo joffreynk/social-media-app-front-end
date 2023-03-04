@@ -34,6 +34,11 @@
 .rightBar .container .item .user .user-info {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+}
+.rightBar .container .item .user .user-info span {
+  font-size: 14px;
+  color: #000;
 }
 .rightBar .container .item .user .user-info img {
   width: 40px;
@@ -42,6 +47,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   text-align: center;
+}
+.rightBar .container .item .user .user-info p {
+  font-size: 16px;
+  color: #686565;
 }
 .rightBar .container .item .user .user-buttons {
   display: flex;
