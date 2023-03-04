@@ -17,7 +17,7 @@ function App() {
 
 
   return (
-    <Router className="">
+    <Router >
       <Routes>
         <Route path="/" element={<ProtectedRoutes> <Layout /></ProtectedRoutes>}>
           <Route index element={<Home />} />

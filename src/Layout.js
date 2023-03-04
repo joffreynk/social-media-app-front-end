@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <div>
         <HeaderBar />
-        <div style={{display:"flex", paddingTop: "0.5rem"}}>
+        <div style={{display:"flex", paddingTop: "0.5rem", backgroundColor:'#f1f1f1'}}>
 
             <LeftBar />
             <Outlet />
