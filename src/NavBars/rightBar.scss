@@ -1,5 +1,5 @@
 .rightBar{
-  flex: 2.5;
+  flex: 3;
   position: sticky;
   position: -webkit-sticky;
   top: 71px;
@@ -12,10 +12,13 @@
   }
 
   .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
     .item {
       background-color: #f0ecec;
-      border: 3px solid #e9dfdf;
+      // border: 3px solid #e9dfdf;
       border-radius: 0.6rem;
       display: flex;
       flex-direction: column;

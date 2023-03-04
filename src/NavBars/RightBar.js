@@ -32,6 +32,30 @@ const RightBar = () => {
           </div>
         </div>
 
+        <div className='item'>
+          <span>Sugestions for you</span>
+          <div className='user'>
+            <div className='user-info'>
+              <img src={passportImage} alt='passport' />
+              <span>Joffrey NK</span>
+            </div>
+            <div className='user-buttons'>
+            <button className='follow'>Follow</button>
+              <button className='dismiss'>Dismiss</button>
+            </div>
+          </div>
+          <div className='user'>
+            <div className='user-info'>
+              <img src={passportImage} alt='passport' />
+              <span>Joffrey NK</span>
+            </div>
+            <div className='user-buttons'>
+              <button className='follow'>Follow</button>
+              <button className='dismiss'>Dismiss</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   )
