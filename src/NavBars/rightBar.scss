@@ -29,6 +29,20 @@
       .user {
         display: flex;
         justify-content: space-between;
+
+        .online {
+          position: relative;
+          
+          .online-status {
+            position: absolute;
+            width: 0.75rem;
+            height:  0.75rem;
+            background-color: green;
+            border-radius: 50%;
+            left: 29px;
+            top: 0px;
+          }
+        }
         
         .user-info {
           display: flex;

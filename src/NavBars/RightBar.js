@@ -160,60 +160,60 @@ last activities section
         <div className='item'>
           <span>Last activities</span>
           <div className='user'>
-            <div className='user-user-info online'>
+            <div className='user-info online'>
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
               <span className='online-status'></span>
             </div>
           </div>
           <div className='user'>
-            <div className='user-info'>
+            <div className='user-info online'>
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
-              <span className='online'></span>
+              <span className='online-status'></span>
             </div>
           </div>
           <div className='user'>
-            <div className='user-info'>
+            <div className='user-info online'>
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
-              <span className='online'></span>
+              <span className='online-status'></span>
             </div>
           </div>
           <div className='user'>
-            <div className='user-info'>
+            <div className='user-info online'>
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
-              <span className='online'></span>
+              <span className='online-status'></span>
             </div>
           </div>
           <div className='user'>
-            <div className='user-info'>
+            <div className='user-info online'>
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
-              <span className='online'></span>
+              <span className='online-status'></span>
             </div>
           </div>
           <div className='user'>
-            <div className='user-info'>
+            <div className='user-info online'>
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
-              <span className='online'></span>
+              <span className='online-status'></span>
             </div>
           </div>
           <div className='user'>
-            <div className='user-info'>
+            <div className='user-info online'>
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
-              <span className='online'></span>
+              <span className='online-status'></span>
             </div>
           </div>
 
           <div className='user'>
-            <div className='user-info'>
+            <div className='user-info online'>
               <img src={passportImage} alt='passport' />
               <span>Joffrey NK</span>
-              <span className='online'></span>
+              <span className='online-status'></span>
             </div>
           </div>
         </div>

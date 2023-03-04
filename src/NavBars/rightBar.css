@@ -31,6 +31,18 @@
   display: flex;
   justify-content: space-between;
 }
+.rightBar .container .item .user .online {
+  position: relative;
+}
+.rightBar .container .item .user .online .online-status {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: green;
+  border-radius: 50%;
+  left: 29px;
+  top: 0px;
+}
 .rightBar .container .item .user .user-info {
   display: flex;
   align-items: center;
