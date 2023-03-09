@@ -1,5 +1,7 @@
 import { createContext, useEffect, useState } from "react"
 
+import passportImage from '../images/passport.png'
+
 export const AuthContext = createContext()
 
 const AuthContextProvider = ({children}) => {
@@ -9,8 +11,15 @@ const AuthContextProvider = ({children}) => {
     }, [currentUser])
 
     const login = () => {
-        // login
+        setCurrentUser({
+          id: 1,
+          name: "Joffrey NK",
+          email: "joyjoffrey@gmail.com",
+          profilePicture: passportImage,
+        })
     }
+
+    console.log(currentUser);
 
     
   return <AuthContext.Provider value={{currentUser, login}}  >

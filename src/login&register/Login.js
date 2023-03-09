@@ -1,9 +1,19 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/authContext";
 
 import "./login&register.css";
 import "./Login.css";
 
 const Login = () => {
+
+  const {login} = useContext(AuthContext)
+  
+  const handleSubmit  = (event) => {
+    event.preventDefault();
+    login();
+
+  }
   return (
     <div className="login-register">
       <div className="card">
@@ -23,7 +33,7 @@ const Login = () => {
           <form>
             <input type="text" placeholder="User name" />
             <input type="password" placeholder="Password" />
-            <button>Login</button>
+            <button onClick={handleSubmit}>Login</button>
           </form>
         </div>
       </div>
