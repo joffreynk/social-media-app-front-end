@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -13,14 +13,16 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import passportImage from '../images/passport.png'
 
 import './headerBar.css'
+import { darkModeContext } from '../context/darkModeContext';
 
 const HeaderBar = () => {
+  const {darkMode, toggleDarkMode} = useContext(darkModeContext)
   return (
     <div className='header-bar'>
       <div className='left'>
         <Link  className='logo'>JTalk</Link>
         <HomeOutlinedIcon />
-        <DarkModeOutlinedIcon />
+        {darkMode? <WbSunnyOutlinedIcon onClick={toggleDarkMode} /> : <DarkModeOutlinedIcon onClick={toggleDarkMode}  />}
         <GridViewOutlinedIcon />
         <div className='search'>
           <input type="text" placeholder='Search' />
