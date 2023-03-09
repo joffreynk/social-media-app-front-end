@@ -7,9 +7,10 @@ import Home from './Home/Home';
 import Profile from './Profile/Profile';
 import { useContext } from 'react';
 import { darkModeContext } from './context/darkModeContext';
+import { AuthContext } from './context/authContext';
 
 function App() {
-  const currentUser  = false;
+  const currentUser  = useContext(AuthContext);
   const {darkMode} = useContext(darkModeContext)
   console.log(darkMode);
   
