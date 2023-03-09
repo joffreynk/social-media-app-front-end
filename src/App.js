@@ -17,16 +17,18 @@ function App() {
 
 
   return (
-    <Router >
-      <Routes>
-        <Route path="/" element={<ProtectedRoutes> <Layout /></ProtectedRoutes>}>
-          <Route index element={<Home />} />
-          <Route path="/profile/:id" element={<Profile/>} />
-        </Route>
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register/>} />
-      </Routes>
-    </Router>
+    <div className='theme-dark ' >
+      <Router >
+        <Routes>
+          <Route path="/" element={<ProtectedRoutes> <Layout /></ProtectedRoutes>}>
+            <Route index element={<Home />} />
+            <Route path="/profile/:id" element={<Profile/>} />
+          </Route>
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register/>} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

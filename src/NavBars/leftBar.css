@@ -1,14 +1,12 @@
 .theme-light .left-bar {
   flex: 1.5;
   position: sticky;
-  position: -webkit-sticky;
-  top: 71px;
-  height: calc(100vh - 71px);
+  top: 70px;
+  height: calc(100vh - 70px);
   overflow-y: scroll;
   overflow-x: hidden;
   padding-right: 10px;
   background-color: white;
-  border-radius: 5px;
   padding: 10px;
   color: #000;
 }
@@ -20,17 +18,17 @@
   flex-direction: column;
   justify-content: center;
   gap: 0.45rem;
+  width: 100%;
 }
 .theme-light .left-bar .container p {
   padding: 0;
   margin: 0;
 }
 .theme-light .left-bar .container hr {
-  margin: 0.3rem 0;
   padding: 0;
   height: 0;
   border: 1px solid lightgray;
-  width: 50%;
+  width: 100%;
 }
 .theme-light .left-bar .container .user {
   display: flex;
@@ -69,14 +67,12 @@
 .theme-dark .left-bar {
   flex: 1.5;
   position: sticky;
-  position: -webkit-sticky;
-  top: 71px;
-  height: calc(100vh - 71px);
+  top: 70px;
+  height: calc(100vh - 70px);
   overflow-y: scroll;
   overflow-x: hidden;
   padding-right: 10px;
   background-color: #222;
-  border-radius: 5px;
   padding: 10px;
   color: whitesmoke;
 }
@@ -88,17 +84,17 @@
   flex-direction: column;
   justify-content: center;
   gap: 0.45rem;
+  width: 100%;
 }
 .theme-dark .left-bar .container p {
   padding: 0;
   margin: 0;
 }
 .theme-dark .left-bar .container hr {
-  margin: 0.3rem 0;
   padding: 0;
   height: 0;
   border: 1px solid #444;
-  width: 50%;
+  width: 100%;
 }
 .theme-dark .left-bar .container .user {
   display: flex;

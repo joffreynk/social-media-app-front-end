@@ -6,7 +6,7 @@ import RightBar from './NavBars/RightBar'
 
 const Layout = () => {
   return (
-    <div className='theme-dark' style={{display:"flex", flexDirection:"column", gap:"0.5rem"}} >
+    <>
         <HeaderBar />
         <div style={{display:"flex"}}>
 
@@ -15,7 +15,7 @@ const Layout = () => {
             <Outlet  />
             <RightBar />
         </div>
-    </div>
+    </>
   )
 }
 

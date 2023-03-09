@@ -6,8 +6,6 @@
   border-bottom: 1px solid lightgray;
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   background-color: white;
   color: #000;
   padding: 0 1rem;
@@ -17,6 +15,7 @@
   align-items: center;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+  cursor: pointer;
 }
 .theme-light .header-bar .left .logo {
   text-decoration: none;
@@ -73,8 +72,6 @@
   border-bottom: 1px solid #444;
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   background-color: #222;
   color: whitesmoke;
   padding: 0 1rem;
@@ -84,6 +81,7 @@
   align-items: center;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+  cursor: pointer;
 }
 .theme-dark .header-bar .left .logo {
   text-decoration: none;

@@ -4,14 +4,12 @@
   @include themify($themes) {
     flex: 1.5;
     position: sticky;
-    position: -webkit-sticky;
-    top: 71px;
-    height: calc(100vh - 71px);
+    top: 70px;
+    height: calc(100vh - 70px);
     overflow-y: scroll;
     overflow-x: hidden;
     padding-right: 10px;
     background-color:themed('bg');
-    border-radius: 5px;
     padding: 10px;
     color: themed('textColor');
 
@@ -24,6 +22,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 0.45rem;
+      width: 100%;
 
       p {
         padding: 0;
@@ -31,11 +30,10 @@
       }
 
       hr {
-        margin: 0.3rem 0;
         padding: 0;
         height: 0;
         border: 1px solid themed('border');
-        width: 50%;
+        width: 100%;
       }
 
       .user {

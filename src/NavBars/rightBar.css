@@ -6,6 +6,7 @@
   height: calc(100vh - 71px);
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: #f6f3f3;
   padding-right: 10px;
 }
 .theme-light .rightBar::-webkit-scrollbar {
@@ -51,7 +52,7 @@
 }
 .theme-light .rightBar .container .item .user .user-info span {
   font-size: 14px;
-  color: #555;
+  color: #000;
 }
 .theme-light .rightBar .container .item .user .user-info img {
   width: 40px;
@@ -98,6 +99,7 @@
   height: calc(100vh - 71px);
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: #333;
   padding-right: 10px;
 }
 .theme-dark .rightBar::-webkit-scrollbar {
@@ -143,7 +145,7 @@
 }
 .theme-dark .rightBar .container .item .user .user-info span {
   font-size: 14px;
-  color: lightgray;
+  color: whitesmoke;
 }
 .theme-dark .rightBar .container .item .user .user-info img {
   width: 40px;
