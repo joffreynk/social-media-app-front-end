@@ -6,9 +6,9 @@ import RightBar from './NavBars/RightBar'
 
 const Layout = () => {
   return (
-    <div style={{display:"flex", flexDirection:"column", gap:"0.5rem" , backgroundColor:'#f1f1f1'}} >
+    <div className='theme-dark' style={{display:"flex", flexDirection:"column", gap:"0.5rem"}} >
         <HeaderBar />
-        <div style={{display:"flex", backgroundColor:'#f1f1f1'}}>
+        <div style={{display:"flex"}}>
 
             <LeftBar />
 

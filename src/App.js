@@ -1,4 +1,3 @@
-import "./styles.scss";
 
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import Register from './login&register/Register';
