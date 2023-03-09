@@ -1,9 +1,9 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 export const darkModeContext = createContext();
 
 const DarkModeContextProvider = ({children}) => {
-    const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode')) || fase);
+    const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode')) || false);
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode)
