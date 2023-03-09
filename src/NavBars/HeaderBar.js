@@ -18,7 +18,7 @@ const HeaderBar = () => {
   return (
     <div className='header-bar'>
       <div className='left'>
-        <Link  className='logo'>J Talk</Link>
+        <Link  className='logo'>JTalk</Link>
         <HomeOutlinedIcon />
         <DarkModeOutlinedIcon />
         <GridViewOutlinedIcon />

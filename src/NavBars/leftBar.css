@@ -7,10 +7,10 @@
   overflow-y: scroll;
   overflow-x: hidden;
   padding-right: 10px;
-  background-color: themes("bg");
+  background-color: white;
   border-radius: 5px;
   padding: 10px;
-  color: themes("textColorSoft");
+  color: #000;
 }
 .theme-light .left-bar::-webkit-scrollbar {
   display: none;
@@ -75,10 +75,10 @@
   overflow-y: scroll;
   overflow-x: hidden;
   padding-right: 10px;
-  background-color: themes("bg");
+  background-color: #222;
   border-radius: 5px;
   padding: 10px;
-  color: themes("textColorSoft");
+  color: whitesmoke;
 }
 .theme-dark .left-bar::-webkit-scrollbar {
   display: none;
@@ -97,7 +97,7 @@
   margin: 0.3rem 0;
   padding: 0;
   height: 0;
-  border: 1px solid lightgray;
+  border: 1px solid #444;
   width: 50%;
 }
 .theme-dark .left-bar .container .user {

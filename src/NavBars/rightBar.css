@@ -1,4 +1,4 @@
-.rightBar {
+.theme-light .rightBar {
   flex: 3;
   position: sticky;
   position: -webkit-sticky;
@@ -8,33 +8,34 @@
   overflow-x: hidden;
   padding-right: 10px;
 }
-.rightBar::-webkit-scrollbar {
+.theme-light .rightBar::-webkit-scrollbar {
   display: none;
 }
-.rightBar .container {
+.theme-light .rightBar .container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.rightBar .container .item {
-  background-color: #fff;
+.theme-light .rightBar .container .item {
+  background-color: white;
   box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   -webkit-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   -moz-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   border-radius: 2px;
   display: flex;
   flex-direction: column;
+  color: #000;
   gap: 1rem;
   padding: 5px;
 }
-.rightBar .container .item .user {
+.theme-light .rightBar .container .item .user {
   display: flex;
   justify-content: space-between;
 }
-.rightBar .container .item .user .online {
+.theme-light .rightBar .container .item .user .online {
   position: relative;
 }
-.rightBar .container .item .user .online .online-status {
+.theme-light .rightBar .container .item .user .online .online-status {
   position: absolute;
   width: 0.75rem;
   height: 0.75rem;
@@ -43,16 +44,16 @@
   left: 29px;
   top: 0px;
 }
-.rightBar .container .item .user .user-info {
+.theme-light .rightBar .container .item .user .user-info {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.rightBar .container .item .user .user-info span {
+.theme-light .rightBar .container .item .user .user-info span {
   font-size: 14px;
-  color: #000;
+  color: #555;
 }
-.rightBar .container .item .user .user-info img {
+.theme-light .rightBar .container .item .user .user-info img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -60,17 +61,17 @@
      object-fit: cover;
   text-align: center;
 }
-.rightBar .container .item .user .user-info p {
+.theme-light .rightBar .container .item .user .user-info p {
   font-size: 16px;
-  color: #686565;
+  color: #555;
 }
-.rightBar .container .item .user .user-buttons {
+.theme-light .rightBar .container .item .user .user-buttons {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding-right: 4px;
 }
-.rightBar .container .item .user .user-buttons button:first-child {
+.theme-light .rightBar .container .item .user .user-buttons button:first-child {
   background-color: #0d8add;
   border: none;
   padding: 4px 8px;
@@ -78,7 +79,7 @@
   cursor: pointer;
   font-size: 16px;
 }
-.rightBar .container .item .user .user-buttons button:last-child {
+.theme-light .rightBar .container .item .user .user-buttons button:last-child {
   background-color: red;
   border: none;
   padding: 4px 8px;
@@ -86,6 +87,98 @@
   cursor: pointer;
   font-size: 16px;
 }
-.rightBar .container .item .user .user-buttons p {
+.theme-light .rightBar .container .item .user .user-buttons p {
+  font-size: 18px;
+}
+.theme-dark .rightBar {
+  flex: 3;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 71px;
+  height: calc(100vh - 71px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 10px;
+}
+.theme-dark .rightBar::-webkit-scrollbar {
+  display: none;
+}
+.theme-dark .rightBar .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.theme-dark .rightBar .container .item {
+  background-color: #222;
+  box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  gap: 1rem;
+  padding: 5px;
+}
+.theme-dark .rightBar .container .item .user {
+  display: flex;
+  justify-content: space-between;
+}
+.theme-dark .rightBar .container .item .user .online {
+  position: relative;
+}
+.theme-dark .rightBar .container .item .user .online .online-status {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: green;
+  border-radius: 50%;
+  left: 29px;
+  top: 0px;
+}
+.theme-dark .rightBar .container .item .user .user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.theme-dark .rightBar .container .item .user .user-info span {
+  font-size: 14px;
+  color: lightgray;
+}
+.theme-dark .rightBar .container .item .user .user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+}
+.theme-dark .rightBar .container .item .user .user-info p {
+  font-size: 16px;
+  color: lightgray;
+}
+.theme-dark .rightBar .container .item .user .user-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 4px;
+}
+.theme-dark .rightBar .container .item .user .user-buttons button:first-child {
+  background-color: #0d8add;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.theme-dark .rightBar .container .item .user .user-buttons button:last-child {
+  background-color: red;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.theme-dark .rightBar .container .item .user .user-buttons p {
   font-size: 18px;
 }/*# sourceMappingURL=rightBar.css.map */

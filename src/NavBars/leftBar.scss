@@ -10,10 +10,10 @@
     overflow-y: scroll;
     overflow-x: hidden;
     padding-right: 10px;
-    background-color:themes('bg');
+    background-color:themed('bg');
     border-radius: 5px;
     padding: 10px;
-    color: themes('textColorSoft');
+    color: themed('textColor');
 
     &::-webkit-scrollbar {
       display: none;
@@ -34,7 +34,7 @@
         margin: 0.3rem 0;
         padding: 0;
         height: 0;
-        border: 1px solid lightgray;
+        border: 1px solid themed('border');
         width: 50%;
       }
 

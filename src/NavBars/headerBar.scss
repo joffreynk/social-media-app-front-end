@@ -9,6 +9,8 @@
     border-bottom: 1px solid themed('border');
     position: sticky;
     top: 0;
+    left: 0;
+    right: 0;
     background-color: themed('bg');
     color: themed('textColor');
     padding: 0 1rem;
@@ -21,7 +23,8 @@
     .logo {
       text-decoration: none;
       color: themed('textColor');
-      font-size: 1rem;
+      font-size: 1.25rem;
+      font-weight: bold;
     }
 
     .search {
@@ -30,6 +33,7 @@
       column-gap: 3px;
       padding-left: -25px;
       border: 1px solid themed('border');
+      border-radius: 0.25rem;
     }
 
       .search-btn {

@@ -6,6 +6,8 @@
   border-bottom: 1px solid lightgray;
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: white;
   color: #000;
   padding: 0 1rem;
@@ -19,7 +21,8 @@
 .theme-light .header-bar .left .logo {
   text-decoration: none;
   color: #000;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 .theme-light .header-bar .left .search {
   display: flex;
@@ -28,6 +31,7 @@
        column-gap: 3px;
   padding-left: -25px;
   border: 1px solid lightgray;
+  border-radius: 0.25rem;
 }
 .theme-light .header-bar .left .search-btn {
   cursor: pointer;
@@ -69,6 +73,8 @@
   border-bottom: 1px solid #444;
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: #222;
   color: whitesmoke;
   padding: 0 1rem;
@@ -82,7 +88,8 @@
 .theme-dark .header-bar .left .logo {
   text-decoration: none;
   color: whitesmoke;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 .theme-dark .header-bar .left .search {
   display: flex;
@@ -91,6 +98,7 @@
        column-gap: 3px;
   padding-left: -25px;
   border: 1px solid #444;
+  border-radius: 0.25rem;
 }
 .theme-dark .header-bar .left .search-btn {
   cursor: pointer;
