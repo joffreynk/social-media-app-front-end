@@ -23,6 +23,24 @@
       bottom: 0.8rem;
       color: white;
       background: #000;
+      margin: 0 5px;
+
+    }
+
+    button {
+      position: absolute;
+      bottom: 2.5rem;
+      margin: 0 10px;
+      color: #fff;
+      background: blue;
+      border: none;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
 
     }
 
