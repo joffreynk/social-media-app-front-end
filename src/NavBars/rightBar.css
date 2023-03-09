@@ -157,7 +157,7 @@
 }
 .theme-dark .rightBar .container .item .user .user-info p {
   font-size: 16px;
-  color: lightgray;
+  color: rgb(204, 200, 200);
 }
 .theme-dark .rightBar .container .item .user .user-buttons {
   display: flex;
