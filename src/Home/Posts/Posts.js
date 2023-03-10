@@ -19,7 +19,7 @@ const Posts = () => {
             <img src={currentUser.profilePicture} alt="hello world " />
             <div>
               <p>{currentUser.name}</p>
-              <span>{currentUser.name}</span>
+              <span>1 minute ago</span>
             </div>
             </div>
             <div className='right'>

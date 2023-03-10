@@ -1,1 +1,21 @@
-/*# sourceMappingURL=posts.css.map */
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.posts .post .user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.posts .post .user-info .left {
+  height: 3rem;
+}
+.posts .post .user-info .left img {
+  width: 3rem;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=posts.css.map */

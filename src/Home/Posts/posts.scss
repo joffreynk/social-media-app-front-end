@@ -1,3 +1,32 @@
 .posts{
-  
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .post {
+
+    .user-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+
+
+      .left {
+        height: 3rem;
+        img {
+          width: 3rem;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+         
+
+      }
+
+      .right {
+
+      }
+    }
+  }
 }
