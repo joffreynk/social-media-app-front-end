@@ -17,35 +17,34 @@ const Posts = () => {
         <div className='user-info'>
           <div className='left'>
             <img src={currentUser.profilePicture} alt="hello world " />
-            <div>
-              <p>{currentUser.name}</p>
+            <div className='post-status'>
+              <span>{currentUser.name}</span>
               <span>1 minute ago</span>
             </div>
-            </div>
-            <div className='right'>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
           </div>
-          <p>P{post.description}</p>
-          <img src={post.img} alt={post.description} />
-          <div className='reactions'>
-            <div className='icons'>
-              <FavoriteBorderOutlinedIcon />
-              <spa>Likes</spa>
-            </div>
-            <div className='icons'>
-              <TextsmsOutlinedIcon />
-              <spa>Comments</spa>
-            </div>
-            <div className='icons'>
-              <ShareOutlinedIcon />
-              <spa>Share</spa>
-            </div>
+          <div className='right'>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
+        </div>
 
+        <p>P{post.description}</p>
+        <img src={post.img} alt={post.description} />
+        <div className='reactions'>
+          <div className='icons'>
+            <FavoriteBorderOutlinedIcon />
+            <spa>Likes</spa>
+          </div>
+          <div className='icons'>
+            <TextsmsOutlinedIcon />
+            <spa>Comments</spa>
+          </div>
+          <div className='icons'>
+            <ShareOutlinedIcon />
+            <spa>Share</spa>
+          </div>
+        </div>
       </div>)
      }
       

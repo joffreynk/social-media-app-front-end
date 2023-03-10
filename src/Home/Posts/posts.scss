@@ -1,32 +1,71 @@
+@import "../../styles.scss";
+
 .posts{
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 
-  .post {
+    .post {
 
-    .user-info {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .user-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
 
 
-      .left {
-        height: 3rem;
-        img {
-          width: 3rem;
-          height: 100%;
-          border-radius: 50%;
-          object-fit: cover;
+
+        .left {
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+
+          img {
+            width: 3rem;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .post-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.4rem;
+          }
+          
+
         }
-         
+
+
+        .right {
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          cursor: pointer;
+          gap: 3px;
+
+          span {
+            width: 6px;
+            height: 6px;
+            background-color: #000;
+            border-radius: 50%;
+          }
+
+        }
 
       }
 
-      .right {
-
-      }
+      rea
     }
   }
 }

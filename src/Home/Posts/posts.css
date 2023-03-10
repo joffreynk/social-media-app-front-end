@@ -1,21 +1,98 @@
-.posts {
+.theme-light .posts {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-.posts .post .user-info {
+.theme-light .posts .post {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.theme-light .posts .post .user-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-.posts .post .user-info .left {
+.theme-light .posts .post .user-info .left {
   height: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.posts .post .user-info .left img {
+.theme-light .posts .post .user-info .left img {
   width: 3rem;
   height: 100%;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.theme-light .posts .post .user-info .left .post-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.theme-light .posts .post .user-info .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 3px;
+}
+.theme-light .posts .post .user-info .right span {
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.theme-dark .posts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.theme-dark .posts .post {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.theme-dark .posts .post .user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.theme-dark .posts .post .user-info .left {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.theme-dark .posts .post .user-info .left img {
+  width: 3rem;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .posts .post .user-info .left .post-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.theme-dark .posts .post .user-info .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 3px;
+}
+.theme-dark .posts .post .user-info .right span {
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 50%;
 }/*# sourceMappingURL=posts.css.map */
