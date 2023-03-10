@@ -1,4 +1,4 @@
-import "./Home.scss"
+import "./Home.css"
 import Posts from "./Posts/Posts"
 import Stories from "./stories/Stories"
 

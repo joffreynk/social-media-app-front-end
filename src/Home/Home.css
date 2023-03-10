@@ -1,10 +1,10 @@
 .theme-light .home {
   flex: 6;
-  padding: 0 20px;
+  padding: 20px 70px;
   background-color: #f6f3f3;
 }
 .theme-dark .home {
   flex: 6;
-  padding: 0 20px;
+  padding: 20px 70px;
   background-color: #333;
 }/*# sourceMappingURL=Home.css.map */
