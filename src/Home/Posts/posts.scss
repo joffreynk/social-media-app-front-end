@@ -65,7 +65,17 @@
 
       }
 
-      rea
+      .reactions {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .icons {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem
+        }
+      }
     }
   }
 }

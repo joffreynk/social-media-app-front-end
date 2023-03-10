@@ -47,6 +47,16 @@
   background-color: #000;
   border-radius: 50%;
 }
+.theme-light .posts .post .reactions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.theme-light .posts .post .reactions .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
 .theme-dark .posts {
   display: flex;
   flex-direction: column;
@@ -95,4 +105,14 @@
   height: 6px;
   background-color: #000;
   border-radius: 50%;
+}
+.theme-dark .posts .post .reactions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.theme-dark .posts .post .reactions .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }/*# sourceMappingURL=posts.css.map */
