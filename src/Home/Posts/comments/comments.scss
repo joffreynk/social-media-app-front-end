@@ -1,3 +1,19 @@
-.posts {
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   
+  .comment {
+    display: flex;
+
+    .left {
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+  }
 }

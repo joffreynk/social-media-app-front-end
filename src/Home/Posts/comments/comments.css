@@ -1,1 +1,15 @@
-/*# sourceMappingURL=comments.css.map */
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.comments .comment {
+  display: flex;
+}
+.comments .comment .left img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=comments.css.map */

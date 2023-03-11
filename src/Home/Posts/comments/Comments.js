@@ -2,6 +2,8 @@ import Comment from './Comment'
 
 import comments from '../../data.js'
 
+import './comments.css'
+
 const Comments = () => {
   return (
     <div className='comments'>

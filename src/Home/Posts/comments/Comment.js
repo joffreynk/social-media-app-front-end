@@ -8,11 +8,10 @@ const Comment = ({comment}) => {
     <div className='comment'>
       <div className='left'>
         <img src={currentUser.profilePicture} alt="hello world " />
-        <div className='post-status'>
+      </div>
+      <div className='middle'></div>
+      <div className='right'>
 
-          <span><Link to={`/profile/${comment.userId}`} >{currentUser.name}</Link> </span>
-          <span className='date'>1 minute ago</span>
-        </div>
       </div>
     </div>
 
