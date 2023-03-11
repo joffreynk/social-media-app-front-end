@@ -7,6 +7,7 @@ import './posts.css'
 import posts from '../data.js'
 import { useContext } from 'react'
 import { AuthContext } from '../../context/authContext'
+import { Link } from 'react-router-dom';
 
 const Posts = () => {
   const {currentUser}  = useContext(AuthContext);
@@ -18,7 +19,8 @@ const Posts = () => {
           <div className='left'>
             <img src={currentUser.profilePicture} alt="hello world " />
             <div className='post-status'>
-              <span>{currentUser.name}</span>
+
+              <span><Link to={`/profile/${post.userId}`} >{currentUser.name}</Link> </span>
               <span>1 minute ago</span>
             </div>
           </div>
@@ -35,15 +37,15 @@ const Posts = () => {
         <div className='reactions'>
           <div className='icons'>
             <FavoriteBorderOutlinedIcon />
-            <spa>Likes</spa>
+            <span>Likes</span>
           </div>
           <div className='icons'>
             <TextsmsOutlinedIcon />
-            <spa>Comments</spa>
+            <span>Comments</span>
           </div>
           <div className='icons'>
             <ShareOutlinedIcon />
-            <spa>Share</spa>
+            <span>Share</span>
           </div>
         </div>
       </div>)

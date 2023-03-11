@@ -6,6 +6,7 @@
     flex-direction: column;
     gap: 3rem;
 
+
     .post {
 
       display: flex;
@@ -40,6 +41,13 @@
             justify-content: center;
             flex-direction: column;
             gap: 0.4rem;
+
+            span {
+              a {
+                text-decoration: none;
+                color: inherit;
+              }
+            }
           }
           
 
