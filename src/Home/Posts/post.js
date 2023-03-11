@@ -4,14 +4,18 @@ import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 
 import posts from '../data.js'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/authContext'
 import { Link } from 'react-router-dom';
 
 const Post = ({post}) => {
 
   const {currentUser}  = useContext(AuthContext);
-  const liked = false;
+  const [liked, setLiked] = useState(JSON.parse(localStorage.getItem('liked')) || false)
+
+  useEffect(()=>{
+    localStorage.setItem('liked', liked)
+  }, [liked])
 
   return (
     <div className='post'>
@@ -36,7 +40,7 @@ const Post = ({post}) => {
       </div>
       <div className='reactions'>
         <div className='icons'>
-          {!liked ? <FavoriteBorderOutlinedIcon /> : <FavoriteOutlinedIcon /> }
+          {!liked ? <FavoriteBorderOutlinedIcon onClick={()=>setLiked(!liked)} /> : <FavoriteOutlinedIcon onClick={()=>setLiked(!liked)} /> }
           
           <span>15 Likes</span>
         </div>
