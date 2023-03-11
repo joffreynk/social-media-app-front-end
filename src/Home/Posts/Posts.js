@@ -14,7 +14,7 @@ const Posts = () => {
     <div className='posts'>
      {
       posts.map(post => <div key={post.id} className='post'>
-        <div className='user-info'>
+        <div className='user'>
           <div className='left'>
             <img src={currentUser.profilePicture} alt="hello world " />
             <div className='post-status'>
@@ -28,9 +28,10 @@ const Posts = () => {
             <span></span>
           </div>
         </div>
-
-        <p>P{post.description}</p>
-        <img src={post.img} alt={post.description} />
+        <div className='post-info'>
+          <p>P{post.description}</p>
+          <img src={post.img} alt={post.description} />
+        </div>
         <div className='reactions'>
           <div className='icons'>
             <FavoriteBorderOutlinedIcon />

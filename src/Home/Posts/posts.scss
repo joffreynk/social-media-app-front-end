@@ -10,9 +10,9 @@
 
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
+      gap: 1rem;
 
-      .user-info {
+      .user {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -63,6 +63,17 @@
 
         }
 
+      }
+
+      .post-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
       }
 
       .reactions {

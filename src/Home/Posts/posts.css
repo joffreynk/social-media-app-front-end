@@ -6,46 +6,55 @@
 .theme-light .posts .post {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 1rem;
 }
-.theme-light .posts .post .user-info {
+.theme-light .posts .post .user {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-.theme-light .posts .post .user-info .left {
+.theme-light .posts .post .user .left {
   height: 3rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.theme-light .posts .post .user-info .left img {
+.theme-light .posts .post .user .left img {
   width: 3rem;
   height: 100%;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.theme-light .posts .post .user-info .left .post-status {
+.theme-light .posts .post .user .left .post-status {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 0.4rem;
 }
-.theme-light .posts .post .user-info .right {
+.theme-light .posts .post .user .right {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
   gap: 3px;
 }
-.theme-light .posts .post .user-info .right span {
+.theme-light .posts .post .user .right span {
   width: 6px;
   height: 6px;
   background-color: #000;
   border-radius: 50%;
+}
+.theme-light .posts .post .post-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.theme-light .posts .post .post-info p {
+  margin: 0;
+  padding: 0;
 }
 .theme-light .posts .post .reactions {
   display: flex;
@@ -65,46 +74,55 @@
 .theme-dark .posts .post {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 1rem;
 }
-.theme-dark .posts .post .user-info {
+.theme-dark .posts .post .user {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-.theme-dark .posts .post .user-info .left {
+.theme-dark .posts .post .user .left {
   height: 3rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.theme-dark .posts .post .user-info .left img {
+.theme-dark .posts .post .user .left img {
   width: 3rem;
   height: 100%;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.theme-dark .posts .post .user-info .left .post-status {
+.theme-dark .posts .post .user .left .post-status {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 0.4rem;
 }
-.theme-dark .posts .post .user-info .right {
+.theme-dark .posts .post .user .right {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
   gap: 3px;
 }
-.theme-dark .posts .post .user-info .right span {
+.theme-dark .posts .post .user .right span {
   width: 6px;
   height: 6px;
   background-color: #000;
   border-radius: 50%;
+}
+.theme-dark .posts .post .post-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.theme-dark .posts .post .post-info p {
+  margin: 0;
+  padding: 0;
 }
 .theme-dark .posts .post .reactions {
   display: flex;
