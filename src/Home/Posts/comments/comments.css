@@ -41,6 +41,24 @@
   font-style: 14px;
   color: #555;
 }
+.theme-light .comments .comment .cinput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 5;
+  gap: 1rem;
+}
+.theme-light .comments .comment .cinput textarea {
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid #555;
+  background-color: transparent;
+  color: #000;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 5px;
+}
 .theme-light .comments .comment .cright {
   flex: 1;
 }
@@ -89,6 +107,24 @@
   font-weight: bold;
   font-style: 14px;
   color: rgb(185, 175, 175);
+}
+.theme-dark .comments .comment .cinput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 5;
+  gap: 1rem;
+}
+.theme-dark .comments .comment .cinput textarea {
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid rgb(185, 175, 175);
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 5px;
 }
 .theme-dark .comments .comment .cright {
   flex: 1;

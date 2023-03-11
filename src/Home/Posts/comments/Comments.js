@@ -15,8 +15,8 @@ const Comments = () => {
 
         <div className='cleft'>
           <img src={currentUser.profilePicture} alt="hello world " />
-          <div className='cmiddle c-input'>
-          <input type="text" placeholder='Search' />
+          <div className='cinput'>
+            <textarea ></textarea>
           </div>
         </div>
 

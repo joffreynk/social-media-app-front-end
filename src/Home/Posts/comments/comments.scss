@@ -47,7 +47,27 @@
           }
         }
 
+      }
 
+      .cinput {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 5;
+        gap: 1rem;
+
+
+        textarea {
+          width: 100%;
+          outline: none;
+          font-size: 16px;
+          border: 1px solid themed('textColorSoft');
+          background-color: transparent;
+          color: themed('textColor');
+          font-size: 18px;
+          border-radius: 8px;
+          padding: 5px;
+        }
       }
 
       .cright {
