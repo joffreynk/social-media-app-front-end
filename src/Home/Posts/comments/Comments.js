@@ -1,28 +1,29 @@
+import { useContext } from 'react'
 import Comment from './Comment'
 
 import comments from '../../data.js'
 
 import './comments.css'
+import { AuthContext } from '../../../context/authContext';
+
 
 const Comments = () => {
+  const {currentUser}  = useContext(AuthContext);
   return (
     <div className='comments'>
       <div className='comment'>
         <div className='left'>
           <img src={currentUser.profilePicture} alt="hello world " />
         <div className='user'>
-          <p>{currentUser.name}</p>
-          <p>{comment.description}</p>
+          
         </div>
         </div>
         <div className='right'>
-          <span>
-            1 minute ago
-          </span>
+          <button>Send</button>
         </div>
       </div>
       {
-        comments.map((comment) =><Comment key={comment.id} comment={comment} />)
+        comments.map((comment) =><Comment currentUser={currentUser} key={comment.id} comment={comment} />)
       }
     </div>
   )

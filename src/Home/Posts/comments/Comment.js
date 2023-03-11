@@ -1,9 +1,7 @@
-import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../context/authContext';
 
-const Comment = ({comment}) => {
-  const {currentUser}  = useContext(AuthContext);
+const Comment = ({comment, currentUser}) => {
+
   return (
     <div className='comment'>
       <div className='left'>
