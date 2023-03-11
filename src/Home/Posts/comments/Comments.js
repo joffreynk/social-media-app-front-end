@@ -1,8 +1,14 @@
-import React from 'react'
+import Comment from './Comment'
+
+import comments from '../../data.js'
 
 const Comments = () => {
   return (
-    <div>Comments</div>
+    <div className='comments'>
+      {
+        comments.map((comment) =><Comment key={comment.id} comment={comment} />)
+      }
+    </div>
   )
 }
 

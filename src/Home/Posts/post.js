@@ -3,10 +3,10 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 
-import posts from '../data.js'
 import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/authContext'
 import { Link } from 'react-router-dom';
+import Comments from './comments/Comments.js';
 
 const Post = ({post}) => {
 
@@ -53,6 +53,7 @@ const Post = ({post}) => {
           <span>7 Shares</span>
         </div>
       </div>
+      <Comments/>
     </div>
   )
 }
