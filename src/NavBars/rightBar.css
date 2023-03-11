@@ -22,12 +22,12 @@
   box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   -webkit-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   -moz-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
-  border-radius: 2px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   color: #000;
   gap: 1rem;
-  padding: 5px;
+  padding: 10px;
 }
 .theme-light .rightBar .container .item .user {
   display: flex;
@@ -115,12 +115,12 @@
   box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   -webkit-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   -moz-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
-  border-radius: 2px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   color: whitesmoke;
   gap: 1rem;
-  padding: 5px;
+  padding: 10px;
 }
 .theme-dark .rightBar .container .item .user {
   display: flex;

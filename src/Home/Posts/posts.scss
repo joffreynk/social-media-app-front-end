@@ -8,6 +8,13 @@
 
 
     .post {
+      background-color: themed('bg');
+      color: themed('textColor');
+      box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+      -webkit-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+      -moz-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+      border-radius: 20px;
+      padding: 20px;
 
       display: flex;
       flex-direction: column;
@@ -70,7 +77,7 @@
           span {
             width: 6px;
             height: 6px;
-            background-color: #000;
+            background-color: themed('textColor');;
             border-radius: 50%;
           }
 

@@ -26,12 +26,12 @@
         box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
         -webkit-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
         -moz-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
-        border-radius: 2px;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         color: themed('textColor');
         gap: 1rem;
-        padding: 5px;
+        padding: 10px;
         .user {
           display: flex;
           justify-content: space-between;
