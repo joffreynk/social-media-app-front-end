@@ -1,44 +1,88 @@
-.comments {
+.theme-light .comments {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   margin-top: 2rem;
 }
-.comments .comment {
+.theme-light .comments .comment {
   display: flex;
   gap: 0.4rem;
   align-items: center;
 }
-.comments .comment .left {
+.theme-light .comments .comment .cleft {
+  flex: 5;
   display: flex;
   gap: 0.5rem;
 }
-.comments .comment .left img {
+.theme-light .comments .comment .cleft img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.comments .comment .user-comment {
+.theme-light .comments .comment .cleft .cmiddle {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 0.4rem;
 }
-.comments .comment .user-comment p {
+.theme-light .comments .comment .cleft .cmiddle p {
   padding: 0;
   margin: 0;
   font-style: 12px;
 }
-.comments .comment .user-comment p:first-child {
+.theme-light .comments .comment .cleft .cmiddle p:first-child {
   font-weight: bold;
   font-style: 14px;
+  color: #555;
 }
-.comments .comment .user-comment input {
-  width: 100%;
-}
-.comments .comment .right {
-  align-self: flex-end;
+.theme-light .comments .comment .cright {
   flex: 1;
+}
+.theme-light .comments .comment .cright span {
+  color: #555;
+}
+.theme-dark .comments {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 2rem;
+}
+.theme-dark .comments .comment {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.theme-dark .comments .comment .cleft {
+  flex: 5;
+  display: flex;
+  gap: 0.5rem;
+}
+.theme-dark .comments .comment .cleft img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .comments .comment .cleft .cmiddle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.theme-dark .comments .comment .cleft .cmiddle p {
+  padding: 0;
+  margin: 0;
+  font-style: 12px;
+}
+.theme-dark .comments .comment .cleft .cmiddle p:first-child {
+  font-weight: bold;
+  font-style: 14px;
+  color: rgb(185, 175, 175);
+}
+.theme-dark .comments .comment .cright {
+  flex: 1;
+}
+.theme-dark .comments .comment .cright span {
+  color: rgb(185, 175, 175);
 }/*# sourceMappingURL=comments.css.map */

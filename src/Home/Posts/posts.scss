@@ -54,11 +54,13 @@
                 text-decoration: none;
                 color: inherit;
                 font-weight: bold;
+                
               }
             }
 
             .date {
               font-size: 12px;
+              color: themed('textColorSoft');
             }
           }
           

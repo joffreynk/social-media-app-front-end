@@ -24,7 +24,7 @@ const Post = ({post}) => {
           <img src={currentUser.profilePicture} alt="hello world " />
           <div className='post-status'>
 
-            <span><Link to={`/profile/${post.userId}`} >{currentUser.name}</Link> </span>
+            <span><Link to={`/profile/${currentUser.id}`} >{currentUser.name}</Link> </span>
             <span className='date'>1 minute ago</span>
           </div>
         </div>

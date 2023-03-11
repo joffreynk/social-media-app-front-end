@@ -12,19 +12,20 @@ const Comments = () => {
   return (
     <div className='comments'>
       <div className='comment'>
-        <div className='left'>
+
+        <div className='cleft'>
           <img src={currentUser.profilePicture} alt="hello world " />
+          <div className='cmiddle c-input'>
+          <input type="text" placeholder='Search' />
+          </div>
         </div>
 
-        <div className='user-comment'>
-        <input type="text" placeholder='Search' />
-        </div>
 
-        <div className='right'>
+        <div className='cright'>
           <button>Send</button>
         </div>
       </div>
-      
+
       {
         comments.map((comment) =><Comment currentUser={currentUser} key={comment.id} comment={comment} />)
       }
