@@ -6,11 +6,13 @@ const Comment = ({comment, currentUser}) => {
     <div className='comment'>
       <div className='left'>
         <img src={currentUser.profilePicture} alt="hello world " />
-      <div className='user'>
+      </div>
+      
+      <div className='user-comment'>
         <p>{currentUser.name}</p>
         <p>{comment.description}</p>
       </div>
-      </div>
+
       <div className='right'>
         <span>
           1 minute ago
