@@ -31,6 +31,11 @@
   margin: 0;
   font-style: 12px;
 }
+.theme-light .comments .comment .cleft .cmiddle p a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
 .theme-light .comments .comment .cleft .cmiddle p:first-child {
   font-weight: bold;
   font-style: 14px;
@@ -74,6 +79,11 @@
   padding: 0;
   margin: 0;
   font-style: 12px;
+}
+.theme-dark .comments .comment .cleft .cmiddle p a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
 }
 .theme-dark .comments .comment .cleft .cmiddle p:first-child {
   font-weight: bold;

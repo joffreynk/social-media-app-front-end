@@ -7,7 +7,7 @@ const Comment = ({comment, currentUser}) => {
       <div className='cleft'>
         <img src={currentUser.profilePicture} alt="hello world " />
         <div className='cmiddle'>
-        <span><Link to={`/profile/${currentUser.id}`} >{currentUser.name}</Link> </span>
+        <p><Link to={`/profile/${currentUser.id}`} >{currentUser.name}</Link> </p>
           <p>{comment.description}</p>
         </div>
       </div>
