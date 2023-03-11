@@ -37,15 +37,15 @@ const Posts = () => {
         <div className='reactions'>
           <div className='icons'>
             <FavoriteBorderOutlinedIcon />
-            <span>Likes</span>
+            <span>15 Likes</span>
           </div>
           <div className='icons'>
             <TextsmsOutlinedIcon />
-            <span>Comments</span>
+            <span>10 Comments</span>
           </div>
           <div className='icons'>
             <ShareOutlinedIcon />
-            <span>Share</span>
+            <span>7 Shares</span>
           </div>
         </div>
       </div>)

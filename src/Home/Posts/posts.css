@@ -81,6 +81,9 @@
   align-items: center;
   gap: 0.4rem;
 }
+.theme-light .posts .post .reactions .icons :first-child {
+  cursor: pointer;
+}
 .theme-dark .posts {
   display: flex;
   flex-direction: column;
@@ -163,4 +166,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+}
+.theme-dark .posts .post .reactions .icons :first-child {
+  cursor: pointer;
 }/*# sourceMappingURL=posts.css.map */
