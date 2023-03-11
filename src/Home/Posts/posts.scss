@@ -40,13 +40,18 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            gap: 0.4rem;
+            gap: 0.3rem;
 
             span {
               a {
                 text-decoration: none;
                 color: inherit;
+                font-weight: bold;
               }
+            }
+
+            .date {
+              font-size: 12px;
             }
           }
           

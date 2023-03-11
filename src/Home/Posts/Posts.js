@@ -21,7 +21,7 @@ const Posts = () => {
             <div className='post-status'>
 
               <span><Link to={`/profile/${post.userId}`} >{currentUser.name}</Link> </span>
-              <span>1 minute ago</span>
+              <span className='date'>1 minute ago</span>
             </div>
           </div>
           <div className='right'>

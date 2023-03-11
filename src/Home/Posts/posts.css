@@ -32,11 +32,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.3rem;
 }
 .theme-light .posts .post .user .left .post-status span a {
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
+}
+.theme-light .posts .post .user .left .post-status .date {
+  font-size: 12px;
 }
 .theme-light .posts .post .user .right {
   display: flex;
@@ -104,11 +108,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.3rem;
 }
 .theme-dark .posts .post .user .left .post-status span a {
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
+}
+.theme-dark .posts .post .user .left .post-status .date {
+  font-size: 12px;
 }
 .theme-dark .posts .post .user .right {
   display: flex;
