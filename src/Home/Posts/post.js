@@ -3,19 +3,18 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 
-import './posts.css'
-
 import posts from '../data.js'
 import { useContext } from 'react'
 import { AuthContext } from '../../context/authContext'
 import { Link } from 'react-router-dom';
 
-const Post = () => {
+const Post = ({post}) => {
 
   const {currentUser}  = useContext(AuthContext);
+  const liked = false;
 
   return (
-    <div key={post.id} className='post'>
+    <div className='post'>
       <div className='user'>
         <div className='left'>
           <img src={currentUser.profilePicture} alt="hello world " />
@@ -37,7 +36,8 @@ const Post = () => {
       </div>
       <div className='reactions'>
         <div className='icons'>
-          <FavoriteBorderOutlinedIcon className='fill'/>
+          {!liked ? <FavoriteBorderOutlinedIcon /> : <FavoriteOutlinedIcon /> }
+          
           <span>15 Likes</span>
         </div>
         <div className='icons'>
