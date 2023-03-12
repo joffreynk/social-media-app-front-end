@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
@@ -20,8 +19,7 @@ const HeaderBar = () => {
   return (
     <div className='header-bar'>
       <div className='left'>
-        <Link  className='logo'>JTalk</Link>
-        <HomeOutlinedIcon />
+        <Link to='/' className='logo'>JTalk</Link>
         {darkMode? <WbSunnyOutlinedIcon onClick={toggleDarkMode} /> : <DarkModeOutlinedIcon onClick={toggleDarkMode}  />}
         <GridViewOutlinedIcon />
         <div className='search'>
@@ -34,7 +32,7 @@ const HeaderBar = () => {
         <MailOutlineOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className='prof-icon'>
-          <img src={passportImage} alt='passport  picture' />
+          <img src={passportImage} alt='passport ' />
           <span>JOffreynk</span>
         </div>
       </div>

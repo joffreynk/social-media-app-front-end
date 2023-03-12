@@ -29,6 +29,10 @@
       height: 300px;
 
       @include mobile(){
+        height: 75px;
+      }
+
+      @include tablet(){
         height: 150px;
       }
 

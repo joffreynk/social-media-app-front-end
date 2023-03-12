@@ -75,6 +75,11 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 960px) {
+  .theme-light .header-bar .right .prof-icon span {
+    display: none;
+  }
+}
 @media (max-width: 480px) {
   .theme-light .header-bar .right .prof-icon span {
     display: none;
@@ -156,6 +161,11 @@
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 960px) {
+  .theme-dark .header-bar .right .prof-icon span {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   .theme-dark .header-bar .right .prof-icon span {
