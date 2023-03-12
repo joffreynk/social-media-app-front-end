@@ -15,7 +15,7 @@
     padding: 10px 5px;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .theme-light .profile {
     padding: 10px;
   }
@@ -125,7 +125,7 @@
 .theme-light .profile .userContainer .user .right {
   flex: 1;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 0.5rem;
 }
 .theme-dark .profile {
@@ -145,7 +145,7 @@
     padding: 10px 5px;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .theme-dark .profile {
     padding: 10px;
   }
@@ -255,6 +255,6 @@
 .theme-dark .profile .userContainer .user .right {
   flex: 1;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 0.5rem;
 }/*# sourceMappingURL=profile.css.map */

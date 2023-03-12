@@ -43,15 +43,18 @@ const Post = ({post}) => {
         <div className='icons'>
           {!liked ? <FavoriteBorderOutlinedIcon onClick={()=>setLiked(!liked)} /> : <FavoriteOutlinedIcon onClick={()=>setLiked(!liked)} /> }
           
-          <span>15 Likes</span>
+          <span>15</span>
+          <span className='icon-text'>Likes</span>
         </div>
         <div className='icons' onClick={()=>setToggleComments(!toggleComments)}>
           <TextsmsOutlinedIcon />
-          <span>10 Comments</span>
+          <span>10</span>
+          <span className='icon-text'>Comments</span>
         </div>
         <div className='icons'>
           <ShareOutlinedIcon />
-          <span>7 Shares</span>
+          <span>7</span>
+          <span className='icon-text'>Shares</span>
         </div>
       </div>
       {toggleComments && <Comments/>}

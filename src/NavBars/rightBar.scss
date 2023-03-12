@@ -3,17 +3,19 @@
 
 .rightBar{
   @include themify($themes) {
+    width: 100vw;
     flex: 3;
     position: sticky;
     position: -webkit-sticky;
     top: 71px;
     height: calc(100vh - 71px);
     overflow-y: scroll;
-    overflow-x: hidden;
+    background-color: themed('bg');
     background-color: themed('bgSoft');
     padding-right: 10px;
     &::-webkit-scrollbar {
       display: none;
+
     }
 
     @include mobile(){
