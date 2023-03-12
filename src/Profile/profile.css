@@ -25,6 +25,11 @@
   border-radius: 2rem;
   height: 300px;
 }
+@media (max-width: 480px) {
+  .theme-light .profile .images {
+    height: 150px;
+  }
+}
 .theme-light .profile .images .cover {
   border-radius: 0.5rem;
   height: 100%;
@@ -42,6 +47,13 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 480px) {
+  .theme-light .profile .images .profilePict {
+    height: 75px;
+    width: 75px;
+    left: calc(50% - 37.5px);
+  }
+}
 .theme-light .profile .userContainer {
   box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   -webkit-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
@@ -53,10 +65,21 @@
   background-color: white;
   margin-bottom: 2rem;
 }
+@media (max-width: 480px) {
+  .theme-light .profile .userContainer {
+    padding: 1.5rem 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+}
 .theme-light .profile .userContainer .user {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media (max-width: 480px) {
+  .theme-light .profile .userContainer .user {
+    flex-direction: column;
+  }
 }
 .theme-light .profile .userContainer .user a {
   text-decoration: none;
@@ -132,6 +155,11 @@
   border-radius: 2rem;
   height: 300px;
 }
+@media (max-width: 480px) {
+  .theme-dark .profile .images {
+    height: 150px;
+  }
+}
 .theme-dark .profile .images .cover {
   border-radius: 0.5rem;
   height: 100%;
@@ -149,6 +177,13 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 480px) {
+  .theme-dark .profile .images .profilePict {
+    height: 75px;
+    width: 75px;
+    left: calc(50% - 37.5px);
+  }
+}
 .theme-dark .profile .userContainer {
   box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   -webkit-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
@@ -160,10 +195,21 @@
   background-color: #222;
   margin-bottom: 2rem;
 }
+@media (max-width: 480px) {
+  .theme-dark .profile .userContainer {
+    padding: 1.5rem 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+}
 .theme-dark .profile .userContainer .user {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media (max-width: 480px) {
+  .theme-dark .profile .userContainer .user {
+    flex-direction: column;
+  }
 }
 .theme-dark .profile .userContainer .user a {
   text-decoration: none;

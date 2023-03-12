@@ -1,31 +1,107 @@
-
-.stories {
+.theme-light .stories {
   display: flex;
   height: 150px;
   margin-bottom: 2rem;
   gap: 10px;
 }
-.stories .story {
+.theme-light .stories img {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .theme-light .stories {
+    height: 70px;
+  }
+}
+@media (max-width: 960px) {
+  .theme-light .stories {
+    height: 100px;
+  }
+}
+.theme-light .stories .story {
   flex: 1;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   display: flex;
 }
-.stories .story img {
+.theme-light .stories .story img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.stories .story span {
+.theme-light .stories .story span {
   position: absolute;
   bottom: 0.8rem;
   color: white;
   background: #000;
   margin: 0 5px;
 }
-.stories .story button {
+@media (max-width: 480px) {
+  .theme-light .stories .story span {
+    display: none;
+  }
+}
+.theme-light .stories .story button {
+  position: absolute;
+  bottom: 2.5rem;
+  margin: 0 10px;
+  color: #fff;
+  background: blue;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.theme-dark .stories {
+  display: flex;
+  height: 150px;
+  margin-bottom: 2rem;
+  gap: 10px;
+}
+.theme-dark .stories img {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .theme-dark .stories {
+    height: 70px;
+  }
+}
+@media (max-width: 960px) {
+  .theme-dark .stories {
+    height: 100px;
+  }
+}
+.theme-dark .stories .story {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+.theme-dark .stories .story img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .stories .story span {
+  position: absolute;
+  bottom: 0.8rem;
+  color: white;
+  background: #000;
+  margin: 0 5px;
+}
+@media (max-width: 480px) {
+  .theme-dark .stories .story span {
+    display: none;
+  }
+}
+.theme-dark .stories .story button {
   position: absolute;
   bottom: 2.5rem;
   margin: 0 10px;

@@ -6,6 +6,11 @@
 .theme-light .posts img {
   width: 100%;
 }
+@media (max-width: 480px) {
+  .theme-light .posts {
+    gap: 1rem;
+  }
+}
 .theme-light .posts .post {
   background-color: white;
   color: #000;
@@ -95,6 +100,11 @@
 }
 .theme-dark .posts img {
   width: 100%;
+}
+@media (max-width: 480px) {
+  .theme-dark .posts {
+    gap: 1rem;
+  }
 }
 .theme-dark .posts .post {
   background-color: #222;

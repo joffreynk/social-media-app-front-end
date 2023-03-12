@@ -1,4 +1,4 @@
-@import "../styles.scss";
+@import "../../styles.scss";
 
 .stories {
   @include themify($themes) {
@@ -12,7 +12,7 @@
     }
 
     @include mobile(){
-      height: 50px;
+      height: 70px;
     }
 
 
@@ -40,6 +40,12 @@
         color: white;
         background: #000;
         margin: 0 5px;
+
+        @include mobile(){
+          display: none;
+        }
+
+
 
       }
 

@@ -28,6 +28,11 @@
       border-radius: 2rem;
       height: 300px;
 
+      @include mobile(){
+        height: 150px;
+      }
+
+
       .cover  {
         border-radius: 0.5rem;
         height: 100%;
@@ -43,6 +48,12 @@
         left: calc(50% - 75px);
         border-radius: 50%;
         object-fit: cover;
+
+        @include mobile(){
+          height: 75px;
+          width: 75px;
+          left: calc(50% - (75px/2));
+        }
       }
     }
 
@@ -57,10 +68,21 @@
       background-color: themed('bg');
       margin-bottom: 2rem;
 
+
+      @include mobile(){
+        padding: 1.5rem 0.5rem;
+        margin-bottom: 0.8rem;
+      }
+
       .user {
         display: flex;
         align-items: center;
         gap: 1rem;
+
+        @include mobile(){
+          flex-direction: column;
+        }
+
 
         a {
           text-decoration: none;
