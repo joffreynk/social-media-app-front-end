@@ -9,19 +9,21 @@
 .theme-light .profile .images {
   position: relative;
   border-radius: 2rem;
-  height: 200px;
+  height: 300px;
 }
 .theme-light .profile .images .cover {
   border-radius: 1rem;
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .theme-light .profile .images .profilePict {
   position: absolute;
   width: 150px;
   height: 150px;
-  bottom: -30%;
-  left: 40%;
+  bottom: -50px;
+  left: calc(50% - 75px);
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -42,19 +44,24 @@
   color: #000;
 }
 .theme-light .profile .userContainer .user .left {
+  flex: 1;
   justify-self: flex-start;
 }
 .theme-light .profile .userContainer .user .center {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
 }
 .theme-light .profile .userContainer .user .center p {
   padding: 0;
   margin: 0;
 }
 .theme-light .profile .userContainer .user .right {
-  justify-self: flex-end;
+  flex: 1;
+  display: flex;
+  justify-content: end;
 }
 .theme-dark .profile {
   flex: 6;
@@ -67,19 +74,21 @@
 .theme-dark .profile .images {
   position: relative;
   border-radius: 2rem;
-  height: 200px;
+  height: 300px;
 }
 .theme-dark .profile .images .cover {
   border-radius: 1rem;
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .theme-dark .profile .images .profilePict {
   position: absolute;
   width: 150px;
   height: 150px;
-  bottom: -30%;
-  left: 40%;
+  bottom: -50px;
+  left: calc(50% - 75px);
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -100,17 +109,22 @@
   color: whitesmoke;
 }
 .theme-dark .profile .userContainer .user .left {
+  flex: 1;
   justify-self: flex-start;
 }
 .theme-dark .profile .userContainer .user .center {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
 }
 .theme-dark .profile .userContainer .user .center p {
   padding: 0;
   margin: 0;
 }
 .theme-dark .profile .userContainer .user .right {
-  justify-self: flex-end;
+  flex: 1;
+  display: flex;
+  justify-content: end;
 }/*# sourceMappingURL=profile.css.map */
