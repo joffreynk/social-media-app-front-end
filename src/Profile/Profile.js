@@ -31,9 +31,9 @@ const Profile = () => {
           </div>
          <div className='center'>
           <p>user Name</p>
-          <div>
-          <Link to=''><LocationOnIcon /> Bujumbura</Link>
-          <Link to=''><LanguageIcon /> Joffrrey NK</Link>
+          <div className='location'>
+          <Link to=''><LocationOnIcon fontSize='small' /> <span>Bujumbura</span> </Link>
+          <Link to=''><LanguageIcon fontSize='small' /><span>Joffrrey nk</span> </Link>
           </div>
           <button>Follow</button>
          </div>

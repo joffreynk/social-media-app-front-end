@@ -61,10 +61,36 @@
           flex-direction: column;
           align-items: center;
           justify-self: center;
+          gap: 1rem;
+          flex-grow: 1;
+
+          .location {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            a {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            }
+          }
+
+          button {
+            border: none;
+            color: #fff;
+            background-color: #5271ff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+          }
 
           p {
             padding: 0;
             margin: 0;
+
+            font-weight: bold;
+            font-size: 18px;
           }
         }
 
@@ -72,6 +98,7 @@
           flex: 1;
           display: flex;
           justify-content: end;
+          gap: 0.5rem;
         }
 
 

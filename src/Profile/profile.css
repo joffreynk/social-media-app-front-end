@@ -53,15 +53,38 @@
   flex-direction: column;
   align-items: center;
   justify-self: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+.theme-light .profile .userContainer .user .center .location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.theme-light .profile .userContainer .user .center .location a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.theme-light .profile .userContainer .user .center button {
+  border: none;
+  color: #fff;
+  background-color: #5271ff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .theme-light .profile .userContainer .user .center p {
   padding: 0;
   margin: 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 .theme-light .profile .userContainer .user .right {
   flex: 1;
   display: flex;
   justify-content: end;
+  gap: 0.5rem;
 }
 .theme-dark .profile {
   flex: 6;
@@ -118,13 +141,36 @@
   flex-direction: column;
   align-items: center;
   justify-self: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+.theme-dark .profile .userContainer .user .center .location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.theme-dark .profile .userContainer .user .center .location a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.theme-dark .profile .userContainer .user .center button {
+  border: none;
+  color: #fff;
+  background-color: #5271ff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .theme-dark .profile .userContainer .user .center p {
   padding: 0;
   margin: 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 .theme-dark .profile .userContainer .user .right {
   flex: 1;
   display: flex;
   justify-content: end;
+  gap: 0.5rem;
 }/*# sourceMappingURL=profile.css.map */
