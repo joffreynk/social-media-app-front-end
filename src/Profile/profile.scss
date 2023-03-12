@@ -5,6 +5,74 @@
     flex: 6;
     padding: 20px 70px;
     background-color: themed('bgSoft');
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .images {
+      position: relative;
+      border-radius: 2rem;
+      height: 200px;
+
+      .cover  {
+        border-radius: 1rem;
+        height: 100%;
+        width: 100%;
+      }
+
+      .profilePict {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        bottom: -30%;
+        left: 40%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .userContainer {
+      display: flex;
+      padding: 2.5rem 1rem;
+      flex-direction: column;
+
+      background-color: themed('bg');
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        a {
+          text-decoration: none;
+          color: themed('textColor');
+        }
+
+        .left {
+          justify-self: flex-start;
+        }
+        
+        
+        .center {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            padding: 0;
+            margin: 0;
+          }
+        }
+
+        .right {
+          justify-self: flex-end;
+        }
+
+
+      }
+    }
+
+    
 
 
   }
