@@ -52,7 +52,7 @@
   width: 100%;
   outline: none;
   font-size: 16px;
-  border: 1px solid #555;
+  border: 1px solid lightgray;
   background-color: transparent;
   color: #000;
   font-size: 18px;
@@ -64,6 +64,15 @@
 }
 .theme-light .comments .comment .cright span {
   color: #555;
+}
+.theme-light .comments .comment .cright button {
+  justify-self: flex-end;
+  border: none;
+  color: #fff;
+  background-color: #5271ff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 .theme-dark .comments {
   display: flex;
@@ -119,7 +128,7 @@
   width: 100%;
   outline: none;
   font-size: 16px;
-  border: 1px solid rgb(185, 175, 175);
+  border: 1px solid #444;
   background-color: transparent;
   color: whitesmoke;
   font-size: 18px;
@@ -131,4 +140,13 @@
 }
 .theme-dark .comments .comment .cright span {
   color: rgb(185, 175, 175);
+}
+.theme-dark .comments .comment .cright button {
+  justify-self: flex-end;
+  border: none;
+  color: #fff;
+  background-color: #5271ff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
 }/*# sourceMappingURL=comments.css.map */

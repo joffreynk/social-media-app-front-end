@@ -37,7 +37,6 @@
               color: inherit;
               font-weight: bold;
             }
-
           }
           
           p:first-child {
@@ -46,7 +45,6 @@
             color: themed('textColorSoft');
           }
         }
-
       }
 
       .cinput {
@@ -56,12 +54,11 @@
         flex: 5;
         gap: 1rem;
 
-
         textarea {
           width: 100%;
           outline: none;
           font-size: 16px;
-          border: 1px solid themed('textColorSoft');
+          border: 1px solid themed('border');
           background-color: transparent;
           color: themed('textColor');
           font-size: 18px;
@@ -75,6 +72,16 @@
         
         span {
           color: themed('textColorSoft');
+        }
+
+        button {
+          justify-self: flex-end;
+          border: none;
+          color: #fff;
+          background-color: #5271ff;
+          padding: 10px;
+          cursor: pointer;
+          border-radius: 3px;
         }
       }
 
