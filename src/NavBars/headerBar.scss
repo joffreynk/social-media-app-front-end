@@ -76,6 +76,12 @@
           border-radius: 50%;
           object-fit: cover;
         }
+
+        @include mobile(){
+          span {
+            display: none;
+          }
+        }
       }
     }
   }

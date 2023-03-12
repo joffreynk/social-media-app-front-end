@@ -15,7 +15,7 @@
     padding: 10px 5px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 960px) {
   .theme-light .profile {
     padding: 10px;
   }
@@ -128,6 +128,11 @@
   justify-content: flex-end;
   gap: 0.5rem;
 }
+@media (max-width: 480px) {
+  .theme-light .profile .userContainer .user .right {
+    display: none;
+  }
+}
 .theme-dark .profile {
   flex: 6;
   padding: 20px 70px;
@@ -145,7 +150,7 @@
     padding: 10px 5px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 960px) {
   .theme-dark .profile {
     padding: 10px;
   }
@@ -257,4 +262,9 @@
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
+}
+@media (max-width: 480px) {
+  .theme-dark .profile .userContainer .user .right {
+    display: none;
+  }
 }/*# sourceMappingURL=profile.css.map */

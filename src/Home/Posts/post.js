@@ -2,6 +2,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/authContext'
@@ -30,9 +31,7 @@ const Post = ({post}) => {
           </div>
         </div>
         <div className='right'>
-          <span></span>
-          <span></span>
-          <span></span>
+          <MoreVertIcon />
         </div>
       </div>
       <div className='post-info'>

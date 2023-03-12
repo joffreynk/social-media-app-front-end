@@ -8,7 +8,7 @@
     padding: 10px 5px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 960px) {
   .theme-light .home {
     padding: 10px;
   }
@@ -23,7 +23,7 @@
     padding: 10px 5px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 960px) {
   .theme-dark .home {
     padding: 10px;
   }

@@ -6,15 +6,17 @@
     height: 150px;
     margin-bottom: 2rem;
     gap: 10px;
+    width: 100%;
 
     img {
       width: 100%;
     }
 
     @include mobile(){
-      height: 70px;
+      height: 60px;
     }
 
+    overflow-x: hidden;
 
     @include tablet(){
       height: 100px;
@@ -24,7 +26,6 @@
     .story {
       flex: 1;
       border-radius: 10px;
-      overflow: hidden;
       position: relative;
       display: flex;
       

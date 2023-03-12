@@ -75,6 +75,11 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 480px) {
+  .theme-light .header-bar .right .prof-icon span {
+    display: none;
+  }
+}
 .theme-dark .header-bar {
   display: flex;
   justify-content: space-between;
@@ -151,4 +156,9 @@
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 480px) {
+  .theme-dark .header-bar .right .prof-icon span {
+    display: none;
+  }
 }/*# sourceMappingURL=headerBar.css.map */

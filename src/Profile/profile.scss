@@ -139,6 +139,11 @@
           display: flex;
           justify-content: flex-end;
           gap: 0.5rem;
+
+          @include mobile(){
+            display: none;
+          }
+  
         }
 
 
