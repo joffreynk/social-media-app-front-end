@@ -12,6 +12,7 @@ const Post = ({post}) => {
 
   const {currentUser}  = useContext(AuthContext);
   const [liked, setLiked] = useState(JSON.parse(localStorage.getItem('liked')) || false)
+  const [toggleComments, setToggleComments] = useState(false)
 
   useEffect(()=>{
     localStorage.setItem('liked', liked)
@@ -44,7 +45,7 @@ const Post = ({post}) => {
           
           <span>15 Likes</span>
         </div>
-        <div className='icons'>
+        <div className='icons' onClick={()=>setToggleComments(!toggleComments)}>
           <TextsmsOutlinedIcon />
           <span>10 Comments</span>
         </div>
@@ -53,7 +54,7 @@ const Post = ({post}) => {
           <span>7 Shares</span>
         </div>
       </div>
-      <Comments/>
+      {toggleComments && <Comments/>}
     </div>
   )
 }
