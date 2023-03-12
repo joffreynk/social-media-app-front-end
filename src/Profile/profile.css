@@ -1,0 +1,10 @@
+.theme-light .profile {
+  flex: 6;
+  padding: 20px 70px;
+  background-color: #f6f3f3;
+}
+.theme-dark .profile {
+  flex: 6;
+  padding: 20px 70px;
+  background-color: #333;
+}/*# sourceMappingURL=profile.css.map */

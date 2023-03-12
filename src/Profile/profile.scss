@@ -1,0 +1,10 @@
+@import "../styles.scss";
+
+  
+.profile {
+  @include themify($themes) {
+    flex: 6;
+    padding: 20px 70px;
+    background-color: themed('bgSoft');
+  }
+}
