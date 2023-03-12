@@ -3,6 +3,9 @@
   flex-direction: column;
   gap: 3rem;
 }
+.theme-light .posts img {
+  width: 100%;
+}
 .theme-light .posts .post {
   background-color: white;
   color: #000;
@@ -89,6 +92,9 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+.theme-dark .posts img {
+  width: 100%;
 }
 .theme-dark .posts .post {
   background-color: #222;

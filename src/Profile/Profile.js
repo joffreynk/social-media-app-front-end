@@ -12,6 +12,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import './profile.css'
 import profilePict from '../images/passport.png';
 import { Link } from 'react-router-dom';
+import Posts from '../Home/Posts/Posts';
 
 const Profile = () => {
   return (
@@ -43,6 +44,10 @@ const Profile = () => {
          </div>
         </div>
 
+      </div>
+
+      <div className='user-posts' >
+        <Posts />
       </div>
       
     </div>

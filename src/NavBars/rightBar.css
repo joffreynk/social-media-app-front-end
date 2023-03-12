@@ -12,6 +12,11 @@
 .theme-light .rightBar::-webkit-scrollbar {
   display: none;
 }
+@media (max-width: 480px) {
+  .theme-light .rightBar {
+    display: none;
+  }
+}
 .theme-light .rightBar .container {
   display: flex;
   flex-direction: column;
@@ -104,6 +109,11 @@
 }
 .theme-dark .rightBar::-webkit-scrollbar {
   display: none;
+}
+@media (max-width: 480px) {
+  .theme-dark .rightBar {
+    display: none;
+  }
 }
 .theme-dark .rightBar .container {
   display: flex;

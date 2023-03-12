@@ -8,6 +8,20 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    color: themed('textColor');
+
+    img {
+      width: 100%;
+    }
+
+    @include mobile(){
+      padding: 10px 5px;
+    }
+
+    @include tablet(){
+      padding: 10px;
+    }
+
 
     .images {
       position: relative;
@@ -15,7 +29,7 @@
       height: 300px;
 
       .cover  {
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -33,11 +47,15 @@
     }
 
     .userContainer {
+      box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+      -webkit-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+      -moz-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
       display: flex;
       padding: 2.5rem 1rem;
       flex-direction: column;
-
+      border-radius: 10px;
       background-color: themed('bg');
+      margin-bottom: 2rem;
 
       .user {
         display: flex;

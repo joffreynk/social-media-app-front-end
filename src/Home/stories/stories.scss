@@ -1,49 +1,64 @@
-.stories {
-  display: flex;
-  height: 150px;
-  margin-bottom: 2rem;
-  gap: 10px;
+@import "../styles.scss";
 
-  
-  .story {
-    flex: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
+.stories {
+  @include themify($themes) {
     display: flex;
-    
+    height: 150px;
+    margin-bottom: 2rem;
+    gap: 10px;
+
     img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
-    span {
-      position: absolute;
-      bottom: 0.8rem;
-      color: white;
-      background: #000;
-      margin: 0 5px;
-
+    @include mobile(){
+      height: 50px;
     }
 
-    button {
-      position: absolute;
-      bottom: 2.5rem;
-      margin: 0 10px;
-      color: #fff;
-      background: blue;
-      border: none;
-      border-radius: 50%;
-      font-weight: bold;
-      font-size: 20px;
+
+    @include tablet(){
+      height: 100px;
+    }
+
+    
+    .story {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
+      span {
+        position: absolute;
+        bottom: 0.8rem;
+        color: white;
+        background: #000;
+        margin: 0 5px;
+
+      }
+
+      button {
+        position: absolute;
+        bottom: 2.5rem;
+        margin: 0 10px;
+        color: #fff;
+        background: blue;
+        border: none;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
     }
-
   }
 
 }

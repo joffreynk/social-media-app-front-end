@@ -5,7 +5,18 @@
   @include themify($themes) {
 
     flex: 6;
-  padding: 20px 70px;
-  background-color: themed('bgSoft');
+    padding: 20px 70px;
+    background-color: themed('bgSoft');
+
+    @include mobile(){
+      padding: 10px 5px;
+    }
+
+
+    @include tablet(){
+      padding: 10px;
+    }
+
+
   }
 }

@@ -13,6 +13,11 @@
 .theme-light .left-bar::-webkit-scrollbar {
   display: none;
 }
+@media (max-width: 480px) {
+  .theme-light .left-bar {
+    display: none;
+  }
+}
 .theme-light .left-bar .container {
   display: flex;
   flex-direction: column;
@@ -78,6 +83,11 @@
 }
 .theme-dark .left-bar::-webkit-scrollbar {
   display: none;
+}
+@media (max-width: 480px) {
+  .theme-dark .left-bar {
+    display: none;
+  }
 }
 .theme-dark .left-bar .container {
   display: flex;

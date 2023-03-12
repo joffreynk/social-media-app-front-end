@@ -12,6 +12,7 @@
     background-color: themed('bg');
     color: themed('textColor');
     padding: 0 1rem;
+    z-index: 1000;
 
     .left{
       display: flex;
@@ -33,6 +34,10 @@
       padding-left: -25px;
       border: 1px solid themed('border');
       border-radius: 0.25rem;
+
+      @include mobile(){
+        border: none;
+      }
     }
 
       .search-btn {
@@ -46,6 +51,10 @@
         font-size: 16px;
         background-color: transparent;
         color: themed('textColor');
+
+        @include mobile(){
+          display: none;
+        }
       }
     }
 

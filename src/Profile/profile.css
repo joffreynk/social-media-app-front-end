@@ -5,6 +5,20 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  color: #000;
+}
+.theme-light .profile img {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .theme-light .profile {
+    padding: 10px 5px;
+  }
+}
+@media (max-width: 960px) {
+  .theme-light .profile {
+    padding: 10px;
+  }
 }
 .theme-light .profile .images {
   position: relative;
@@ -12,7 +26,7 @@
   height: 300px;
 }
 .theme-light .profile .images .cover {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -29,10 +43,15 @@
      object-fit: cover;
 }
 .theme-light .profile .userContainer {
+  box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   display: flex;
   padding: 2.5rem 1rem;
   flex-direction: column;
+  border-radius: 10px;
   background-color: white;
+  margin-bottom: 2rem;
 }
 .theme-light .profile .userContainer .user {
   display: flex;
@@ -93,6 +112,20 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  color: whitesmoke;
+}
+.theme-dark .profile img {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .theme-dark .profile {
+    padding: 10px 5px;
+  }
+}
+@media (max-width: 960px) {
+  .theme-dark .profile {
+    padding: 10px;
+  }
 }
 .theme-dark .profile .images {
   position: relative;
@@ -100,7 +133,7 @@
   height: 300px;
 }
 .theme-dark .profile .images .cover {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -117,10 +150,15 @@
      object-fit: cover;
 }
 .theme-dark .profile .userContainer {
+  box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 7px 12px 13px -6px rgba(0, 0, 0, 0.52);
   display: flex;
   padding: 2.5rem 1rem;
   flex-direction: column;
+  border-radius: 10px;
   background-color: #222;
+  margin-bottom: 2rem;
 }
 .theme-dark .profile .userContainer .user {
   display: flex;
