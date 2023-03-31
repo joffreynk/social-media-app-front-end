@@ -1,9 +1,24 @@
 import { Link } from "react-router-dom";
+import {useForm} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
 import "./login&register.css";
 import "./Register.css";
 
+const schema = yup.object({
+  firstName: yup.string().required(),
+  lastName: yup.string().required,
+  userName:yup.string().required(),
+  password: yup.string().required(),
+  email:yup.string().required(),
+}).required()
 
 const Register = () => {
+
+  const {register, handleSubmit, formState: {errors}} = useForm({resolver: yupResolver(schema)});
+
+  const registerUser = data => console.log(data);
   return (
     <div className="login-register">
       <div className="card register-card">
@@ -20,13 +35,18 @@ const Register = () => {
         </div>
         <div className="right">
           <h1>Register <span></span> </h1>
-          <form className="register-form">
-            <input type="text" placeholder="User name" />
-            <input type="text" placeholder="first Name" />
-            <input type="text" placeholder="last Name" />
-            <input type="email" placeholder="E-mail" />
-            <input type="password" placeholder="Password" />
-            <button>Register</button>
+          <form className="register-form" onSubmit={handleSubmit(registerUser)}>
+            <input {...register("userName")}  type="text" placeholder="User name" />
+            {errors.userName?.message}
+            <input {...register("firstName")} type="text" placeholder="first Name" />
+            {errors.firstName?.message}
+            <input  {...register("lastName")} type="text" placeholder="last Name" />
+            {errors.lastName?.message}
+            <input {...register("email")} type="email" placeholder="E-mail" />
+           {errors.email?.message}
+            <input {...register("password")} type="password" placeholder="Password" />
+            {errors.password?.message}
+            <button type="submit">Register</button>
           </form>
         </div>
       </div>
