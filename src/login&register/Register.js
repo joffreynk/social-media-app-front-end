@@ -7,12 +7,12 @@ import "./login&register.css";
 import "./Register.css";
 
 const schema = yup.object({
-  firstName: yup.string().required(),
-  lastName: yup.string().required,
-  userName:yup.string().required(),
-  password: yup.string().required(),
+  firstName: yup.string().min(2).required(),
+  lastName: yup.string().min(2).required(),
+  userName:yup.string().min(2).required(),
+  password: yup.string().min(6).max(15).required(),
   email:yup.string().required(),
-}).required()
+});
 
 const Register = () => {
 
