@@ -74,7 +74,7 @@
 .login-register .card .right form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0 0.75rem;
   line-height: 120%;
 }

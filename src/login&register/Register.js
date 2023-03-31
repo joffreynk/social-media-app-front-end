@@ -22,7 +22,8 @@ const Register = () => {
           <h1>Register <span></span> </h1>
           <form className="register-form">
             <input type="text" placeholder="User name" />
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="first Name" />
+            <input type="text" placeholder="last Name" />
             <input type="email" placeholder="E-mail" />
             <input type="password" placeholder="Password" />
             <button>Register</button>
