@@ -10,13 +10,8 @@ const AuthContextProvider = ({children}) => {
         localStorage.setItem('user', JSON.stringify(currentUser))
     }, [currentUser])
 
-    const login = () => {
-        setCurrentUser({
-          id: 1,
-          name: "Joffrey NK",
-          email: "joyjoffrey@gmail.com",
-          profilePicture: passportImage,
-        })
+    const login = (data) => {
+        setCurrentUser({...data, profilePicture: passportImage})
     }
 
     console.log(currentUser);

@@ -1,10 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import axios from 'axios'
 
 import "./login&register.css";
 import "./Register.css";
+
+import url from "../context/url";
+import { useContext } from "react";
+import { AuthContext } from "../context/authContext";
 
 const schema = yup.object({
   firstName: yup.string().min(2).required(),
@@ -15,10 +20,26 @@ const schema = yup.object({
 });
 
 const Register = () => {
+  const navigate = useNavigate()
 
   const {register, handleSubmit, formState: {errors}} = useForm({resolver: yupResolver(schema)});
 
-  const registerUser = data => console.log(data);
+  const registerUser =  (data) => {
+    const options = {
+      body: JSON.stringify(data),
+      method: "POST",
+      mode: 'cors',
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+    fetch(`${url}users`, options)
+    .then(response=> response.json())
+    .then(res => {
+      console.log(res);
+      navigate('/login')
+    }).catch(error=> console.error(error));
+  };
   return (
     <div className="login-register">
       <div className="card register-card">

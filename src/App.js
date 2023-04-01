@@ -15,7 +15,7 @@ function App() {
   console.log(darkMode);
   
   const ProtectedRoutes = ({children}) => {
-    if(currentUser) return <Navigate to="/login" />;
+    if(!currentUser) return <Navigate to="/login" />;
   
     return children
   }
