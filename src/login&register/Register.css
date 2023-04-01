@@ -10,4 +10,10 @@
 }
 .register-card .right form {
   gap: 0.3rem;
+}
+.register-card .right form .error {
+  padding: 0;
+  margin: 0;
+  color: red;
+  font-size: 22px;
 }/*# sourceMappingURL=Register.css.map */

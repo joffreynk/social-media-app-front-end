@@ -8,7 +8,7 @@ import "./login&register.css";
 import "./Register.css";
 
 import url from "../context/url";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext";
 
 const schema = yup.object({
@@ -21,6 +21,7 @@ const schema = yup.object({
 
 const Register = () => {
   const navigate = useNavigate()
+  const [error, setError] = useState(null)
 
   const {register, handleSubmit, formState: {errors}} = useForm({resolver: yupResolver(schema)});
 
@@ -36,8 +37,8 @@ const Register = () => {
     fetch(`${url}users`, options)
     .then(response=> response.json())
     .then(res => {
-      console.log(res);
-      navigate('/login')
+      if(res.statusCode === 200) navigate('/login')
+      setError(res.error)
     }).catch(error=> console.error(error));
   };
   return (
@@ -67,6 +68,7 @@ const Register = () => {
            {errors.email?.message}
             <input {...register("password")} type="password" placeholder="Password" />
             {errors.password?.message}
+            {error && <p className="error">{error}</p>}
             <button type="submit">Register</button>
           </form>
         </div>

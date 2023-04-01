@@ -13,9 +13,11 @@ import passportImage from '../images/passport.png'
 
 import './headerBar.css'
 import { darkModeContext } from '../context/darkModeContext';
+import { AuthContext } from '../context/authContext';
 
 const HeaderBar = () => {
   const {darkMode, toggleDarkMode} = useContext(darkModeContext)
+  const {currentUser} = useContext(AuthContext)
   return (
     <div className='header-bar'>
       <div className='left'>
@@ -32,8 +34,8 @@ const HeaderBar = () => {
         <MailOutlineOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className='prof-icon'>
-          <img src={passportImage} alt='passport ' />
-          <span>JOffreynk</span>
+          <img src={currentUser.profilePicture} alt='passport ' />
+          <span>{currentUser.userName}</span>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import event from '../images/nav/event.png'
 import game from '../images/nav/game.png'
 import funds from '../images/nav/funds.png'
@@ -9,14 +9,16 @@ import marketPlace from '../images/nav/marketPlace.png'
 
 import passportImage from '../images/passport.png'
 import './leftBar.css'
+import { AuthContext } from '../context/authContext'
 
 const LeftBar = () => {
+  const {currentUser} = useContext(AuthContext)
   return (
     <div className='left-bar'>
       <div className='container'>
         <div className='user'>
-        <img src={passportImage} alt='passport  profile' />
-        <span>JOffreynk</span>
+        <img src={currentUser.profilePicture} alt='profile' />
+        <span>{currentUser.userName}</span>
         </div>
 
         <div className='item event'>

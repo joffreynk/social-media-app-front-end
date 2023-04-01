@@ -13,6 +13,13 @@
         form{
           gap: 0.3rem;
 
+          .error {
+            padding: 0;
+            margin: 0;
+            color: red;
+            font-size: 22px;
+          }
+
         }
 
 

@@ -11,7 +11,7 @@ const AuthContextProvider = ({children}) => {
   }
   console.log(currentUser);
     useEffect(() => {
-        localStorage.setItem('user', JSON.stringify(currentUser))
+        localStorage.setItem('socialMediaApp', JSON.stringify(currentUser))
     }, [currentUser])
 
 
