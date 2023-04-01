@@ -8,8 +8,7 @@ import "./login&register.css";
 import "./Register.css";
 
 import url from "../context/url";
-import { useContext, useState } from "react";
-import { AuthContext } from "../context/authContext";
+import { useState } from "react";
 
 const schema = yup.object({
   firstName: yup.string().min(2).required(),
@@ -29,17 +28,22 @@ const Register = () => {
     const options = {
       body: JSON.stringify(data),
       method: "POST",
+      withCredentials:true,
       mode: 'cors',
       headers: {
         "Content-Type": "application/json",
       },
     }
-    fetch(`${url}users`, options)
-    .then(response=> response.json())
-    .then(res => {
-      if(res.statusCode === 200) navigate('/login')
-      setError(res.error)
-    }).catch(error=> console.error(error));
+
+    axios.post(`${url}users`, options)
+    .then(Response => {
+      if(Response.statusCode === 200) navigate('/login')
+      setError(Response.data.error)
+    })
+    .catch(error=> {
+      if(error&& error.response.data) setError(error.response.data.error)
+      console.error(error)
+    });
   };
   return (
     <div className="login-register">

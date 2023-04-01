@@ -27,18 +27,17 @@ const Login = () => {
   
   const handleLogin  = (data) => {
     const options = {
-      method:"GET",
       mode: 'cors',
+      withCredentials: true,
       headers:{
         'content-type': 'application/json',
         'username': data.userName,
         'password': data.password
       },
     }
-    fetch(`${url}auth`, options)
-    .then(response=>response.json())
+    axios.get(`${url}auth`, options)
     .then(res=>{
-      login(res)
+      login(res.data)
       navigate('/')
     }).catch(error => console.log(error))
   }

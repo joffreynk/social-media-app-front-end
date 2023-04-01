@@ -5,13 +5,13 @@ import passportImage from '../images/passport.png'
 export const AuthContext = createContext()
 
 const AuthContextProvider = ({children}) => {
-    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
+    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('socialMediaAppToken')) || null);
     const login = (data) => {
       setCurrentUser({...data, profilePicture: data.profilePicture || passportImage})
   }
   console.log(currentUser);
     useEffect(() => {
-        localStorage.setItem('socialMediaApp', JSON.stringify(currentUser))
+        localStorage.setItem('socialMediaAppToken', JSON.stringify(currentUser))
     }, [currentUser])
 
 

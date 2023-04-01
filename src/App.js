@@ -15,10 +15,7 @@ function App() {
   console.log(darkMode);
   
   const ProtectedRoutes = ({children}) => {
-    if(!currentUser) {
-      localStorage.removeItem('socialMediaApp')
-      return <Navigate to="/login" />
-    };
+    if(!currentUser) return <Navigate to="/login" />;
   
     return children
   }
