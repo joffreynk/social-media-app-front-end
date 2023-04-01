@@ -6,15 +6,15 @@ export const AuthContext = createContext()
 
 const AuthContextProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
+    const login = (data) => {
+      setCurrentUser({...data, profilePicture: data.profilePicture || passportImage})
+  }
+  console.log(currentUser);
     useEffect(() => {
         localStorage.setItem('user', JSON.stringify(currentUser))
     }, [currentUser])
 
-    const login = (data) => {
-        setCurrentUser({...data, profilePicture: passportImage})
-    }
 
-    console.log(currentUser);
 
     
   return <AuthContext.Provider value={{currentUser, login}}  >

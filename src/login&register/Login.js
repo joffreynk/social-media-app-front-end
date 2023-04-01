@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 
 import {useForm} from 'react-hook-form'
@@ -22,6 +22,7 @@ const schema = yup.object({
 const Login = () => {
 
   const {login} = useContext(AuthContext)
+  const navigate = useNavigate()
   const {register, handleSubmit, formState: {errors}} = useForm({resolver: yupResolver(schema)})
   
   const handleLogin  = (data) => {
@@ -38,6 +39,7 @@ const Login = () => {
     .then(response=>response.json())
     .then(res=>{
       login(res)
+      navigate('/')
     }).catch(error => console.log(error))
   }
   return (
