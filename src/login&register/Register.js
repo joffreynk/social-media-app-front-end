@@ -37,7 +37,7 @@ const Register = () => {
 
     axios.post(`${url}users`, options)
     .then(response => {
-      if(response.statusCode === 200) navigate('/login');
+      if(response.status === 200) navigate('/login');
       setError(response.data.error);
     })
     .catch(error=> {
