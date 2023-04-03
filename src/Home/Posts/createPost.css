@@ -42,6 +42,7 @@
 .theme-light form .lower input {
   background-color: white;
   color: #000;
+  padding-left: 45px;
 }
 .theme-dark form {
   background-color: #222;
@@ -87,4 +88,5 @@
 .theme-dark form .lower input {
   background-color: #222;
   color: whitesmoke;
+  padding-left: 45px;
 }/*# sourceMappingURL=createPost.css.map */
