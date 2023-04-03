@@ -1,0 +1,55 @@
+@import "../../styles.scss";
+
+form {
+  @include themify($themes) {
+    background-color: themed('bg');
+    color: themed('textColor');
+    box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+    -moz-box-shadow: 7px 12px 13px -6px rgba(0,0,0,0.52);
+    border-radius: 20px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    .upper{
+      display: flex;
+      gap: 5px;
+      .img {
+        width: 35px;
+        height: 35px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      textarea {
+        background-color: themed('bg');
+        color: themed('textColor');
+        flex: 1;
+        font-size: 18px;
+        outline: none;
+        border: 1px solid themed('border');;
+        border-radius: 10px;
+        padding-left: 3px;
+
+      }
+    }
+
+    .lower {
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        background-color: themed('bg');
+        color: themed('textColor');
+        
+      }
+    }
+  }
+}
