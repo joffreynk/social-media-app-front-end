@@ -5,20 +5,12 @@ import './posts.css'
 import Post from './post'
 import CreatePost from './createPost'
 import { makeRequest } from '../../context/requests'
-import axios from 'axios'
 
 const Posts = () => {
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['posts'],
-    queryFn: () =>
-      makeRequest.get('/posts').then(
-        (res) => {
-          console.log(res.data);
-
-          return res.data;
-        }
-      ),
+    queryFn: () => makeRequest.get('/posts').then( (res) => res.data),
   })
 
   console.log(data);
