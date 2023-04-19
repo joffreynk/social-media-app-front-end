@@ -5,14 +5,23 @@ import './posts.css'
 import Post from './post'
 import CreatePost from './createPost'
 import { makeRequest } from '../../context/requests'
+import axios from 'axios'
 
 const Posts = () => {
-  
-  const { isLoading, error, posts } = useQuery({
+
+  const { isLoading, error, data } = useQuery({
     queryKey: ['posts'],
     queryFn: () =>
-    makeRequest.get('/posts').then((res) => res.json()),
+      makeRequest.get('/posts').then(
+        (res) => {
+          console.log(res.data);
+
+          return res.data;
+        }
+      ),
   })
+
+  console.log(data);
 
   if (isLoading) return 'Loading POSTS';
 
@@ -23,7 +32,7 @@ const Posts = () => {
     <div className='posts'>
       <CreatePost />
      {
-      posts.length? posts.map(post => <Post post={post} key={post.id} /> ): "OOops you don't have a post"
+      data.length? data.map(post => <Post post={post} key={post.id} /> ): "OOops you don't have a post"
      }
 
     </div>
