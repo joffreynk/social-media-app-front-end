@@ -35,8 +35,8 @@ const Post = ({post}) => {
         </div>
       </div>
       <div className='post-info'>
-        <p>P{post.description}</p>
-        <img src={post.img} alt={post.description} />
+        <p>{post.title}</p>
+        <img src={post.picture} alt={post.title} />
       </div>
       <div className='reactions'>
         <div className='icons'>
