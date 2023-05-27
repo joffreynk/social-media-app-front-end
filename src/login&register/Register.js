@@ -51,7 +51,7 @@ const Register = () => {
         <div className="left">
           <h1>J Talk</h1>
           <p>
-            Welcome to J Talk and share your photos, ideas, and videos with
+            Welcome to JJG Talk and share your photos, ideas, and videos with
             others
           </p>
           <span>Do you have an account?</span>
