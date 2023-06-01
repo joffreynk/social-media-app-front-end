@@ -1,11 +1,19 @@
 import React, { useContext, useState } from 'react'
 import { AuthContext } from '../../context/authContext'
+import { useMutation } from '@tanstack/react-query'
+import { makeRequest } from '../../context/requests'
+
 
 import './createPost.css'
 
 const CreatePost = () => {
   const {currentUser} = useContext(AuthContext)
   const [postData, setPostData] = useState({description:null, postImage:null})
+
+  const mutation = useMutation({
+    mutationFn: (data) => makeRequest.get('/posts').then( (res) => res.data),
+  })
+  
   const post = ()=>{
       console.log(postData)
     }
