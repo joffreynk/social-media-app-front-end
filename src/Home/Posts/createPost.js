@@ -5,7 +5,6 @@ import { makeRequest } from '../../context/requests'
 
 
 import './createPost.css'
-import axios from 'axios'
 
 const CreatePost = () => {
   const {currentUser} = useContext(AuthContext)

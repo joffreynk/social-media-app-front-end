@@ -26,6 +26,7 @@ const Login = () => {
   const {register, handleSubmit, formState: {errors}} = useForm({resolver: yupResolver(schema)})
   
   const handleLogin  = (data) => {
+    console.log('handle login')
     const options = {
       mode: 'cors',
       withCredentials: true,
@@ -35,9 +36,10 @@ const Login = () => {
         'password': data.password
       },
     }
-    axios.get(`${url}auth`, options)
+    axios.get(`${url}/auth`, options)
     .then(res=>{
       login(res.data)
+      console.log(res.data);
       navigate('/')
     }).catch(error => console.log(error))
   }
