@@ -5,18 +5,22 @@ import { makeRequest } from '../../context/requests'
 
 
 import './createPost.css'
+import axios from 'axios'
 
 const CreatePost = () => {
   const {currentUser} = useContext(AuthContext)
   const [postData, setPostData] = useState({description:null, postImage:null})
 
   const mutation = useMutation({
-    mutationFn: (data) => makeRequest.get('/posts').then( (res) => res.data),
-  })
-  
-  const post = ()=>{
+    mutationFn: (data) => {
       console.log(postData)
+      const formData = new FormData()
+      formData.append('description', data.description)
+      formData.append('postImage', data.postImage)
+      return makeRequest.post('/posts', formData)
     }
+  })
+
   return (
     <form>
       <div className='upper'>
@@ -27,7 +31,7 @@ const CreatePost = () => {
       </div>
       <div className='lower'>
         <input type='file' accept="image/x-png,image/gif,image/jpeg"  onChange={e=>setPostData({...postData, postImage:e.target.files[0]})} name='postImage' alt='choose picture' />
-        <button type='button' onClick={post}>post</button>
+        <button type='button' onClick={()=>{mutation.mutate(postData)}}>post</button>
       </div>
     </form>
   )
