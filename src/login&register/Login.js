@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 
@@ -24,6 +24,7 @@ const Login = () => {
   const {login} = useContext(AuthContext)
   const navigate = useNavigate()
   const {register, handleSubmit, formState: {errors}} = useForm({resolver: yupResolver(schema)})
+  const [loginError, setLoginError] = useState(null)
   
   const handleLogin  = (data) => {
     console.log('handle login')
@@ -39,9 +40,16 @@ const Login = () => {
     axios.get(`${url}/auth`, options)
     .then(res=>{
       login(res.data)
-      console.log(res.data);
+      setLoginError(null)
       navigate('/')
-    }).catch(error => console.log(error))
+    }).catch(error => {
+      console.log(error.response.data.message);
+      if(error.response && error.response.data){
+        setLoginError( error.response.data.message)
+      }else{
+        setLoginError( error.message)
+      }
+    })
   }
   return (
     <div className="login-register">
@@ -60,6 +68,7 @@ const Login = () => {
         <div className="right">
           <h1>Login <span></span> </h1>
           <form onSubmit={handleSubmit(handleLogin)}>
+          {loginError&& <p className="login-error"> {loginError} </p>}
             <input {...register('userName')} type="text" placeholder="User name" />
             {errors.userName?.message}
             <input {...register('password')} type="password" placeholder="Password" />
