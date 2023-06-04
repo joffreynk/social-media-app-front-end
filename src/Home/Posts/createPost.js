@@ -16,7 +16,11 @@ const CreatePost = () => {
       const formData = new FormData()
       formData.append('description', data.description)
       formData.append('postImage', data.postImage)
-      return makeRequest.post('/posts', formData)
+      return makeRequest.post('/posts', formData, {
+        headers: {
+          'content-type': 'multipart/form-data; boundary=----WebKitFormBoundaryteOgxXV4mdBUk5Zo',
+        }
+      })
     }
   })
 

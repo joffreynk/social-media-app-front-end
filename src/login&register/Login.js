@@ -34,7 +34,7 @@ const Login = () => {
       headers:{
         'content-type': 'application/json',
         'username': data.userName,
-        'password': data.password
+        'password': data.password,
       },
     }
     axios.get(`${url}/auth`, options)
