@@ -19,7 +19,8 @@ const CreatePost = () => {
       return makeRequest.post('/posts', formData, {
         headers: {'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryl75WdZW7JBJ8IQ0Y',}
       })
-    }
+    },
+    // onSuccess:
   })
 
   return (
