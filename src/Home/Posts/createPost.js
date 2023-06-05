@@ -20,7 +20,7 @@ const CreatePost = () => {
         headers: {'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryl75WdZW7JBJ8IQ0Y',}
       })
     },
-    // onSuccess:
+    onSuccess: ()=>makeRequest.get('/posts').then( (res) => res.data),
   })
 
   return (
@@ -32,7 +32,7 @@ const CreatePost = () => {
         <textarea rows={4}  placeholder='what is in your mind' name='description' onChange={e=>setPostData({...postData, description:e.target.value})}></textarea>
       </div>
       <div className='lower'>
-        <input type='file'  onChange={e=>setPostData({...postData, postImage:e.target.files[0]})} name='postImage' alt='choose picture' />
+        <input type='file' accept='image/*'  onChange={e=>setPostData({...postData, postImage:e.target.files[0]})} name='postImage' alt='choose picture' />
         <button type='button' onClick={()=>{mutation.mutate(postData)}}>post</button>
       </div>
     </form>
