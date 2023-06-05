@@ -43,7 +43,6 @@ const Login = () => {
       setLoginError(null)
       navigate('/')
     }).catch(error => {
-      console.log(error.response.data.message);
       if(error.response && error.response.data){
         setLoginError( error.response.data.message)
       }else{

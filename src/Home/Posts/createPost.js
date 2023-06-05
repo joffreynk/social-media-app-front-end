@@ -14,12 +14,10 @@ const CreatePost = () => {
     mutationFn: (data) => {
       console.log(postData)
       const formData = new FormData()
-      formData.append('description', data.description)
-      formData.append('postImage', data.postImage)
+      formData.set('description', data.description)
+      formData.set('postImage', data.postImage)
       return makeRequest.post('/posts', formData, {
-        headers: {
-          'content-type': 'multipart/form-data; boundary=----WebKitFormBoundaryteOgxXV4mdBUk5Zo',
-        }
+        headers: {'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryl75WdZW7JBJ8IQ0Y',}
       })
     }
   })
@@ -33,7 +31,7 @@ const CreatePost = () => {
         <textarea rows={4}  placeholder='what is in your mind' name='description' onChange={e=>setPostData({...postData, description:e.target.value})}></textarea>
       </div>
       <div className='lower'>
-        <input type='file' accept="image/x-png,image/gif,image/jpeg"  onChange={e=>setPostData({...postData, postImage:e.target.files[0]})} name='postImage' alt='choose picture' />
+        <input type='file'  onChange={e=>setPostData({...postData, postImage:e.target.files[0]})} name='postImage' alt='choose picture' />
         <button type='button' onClick={()=>{mutation.mutate(postData)}}>post</button>
       </div>
     </form>
