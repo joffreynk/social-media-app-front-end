@@ -3,6 +3,7 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Delete } from '@mui/icons-material';
 
 import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/authContext'
@@ -19,6 +20,11 @@ const Post = ({post}) => {
     localStorage.setItem('liked', liked)
   }, [liked])
 
+  const deletePost = (id, url) => {
+    const pictureUrl = url.split('/').slice(-2).join('/')
+    console.log(id, '  :  ', pictureUrl);
+  }
+
   return (
     <div className='post'>
       <div className='user'>
@@ -32,6 +38,7 @@ const Post = ({post}) => {
         </div>
         <div className='right'>
           <MoreVertIcon />
+          <Delete className='delete-post' onClick={()=>deletePost(post.id, post.picture)} />
         </div>
       </div>
       <div className='post-info'>
