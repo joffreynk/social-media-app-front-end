@@ -8,12 +8,11 @@ import './createPost.css'
 
 const CreatePost = () => {
   const {currentUser} = useContext(AuthContext)
-  const [postData, setPostData] = useState({description:null, postImage:null})
+  const [postData, setPostData] = useState({description: '', postImage: null})
 
   const mutation = useMutation({
     queryKey: ['posts'],
     mutationFn: (data) => {
-      console.log(postData)
       const formData = new FormData()
       formData.set('description', data.description)
       formData.set('postImage', data.postImage)

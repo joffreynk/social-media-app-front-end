@@ -25,7 +25,10 @@ const Post = ({post}) => {
 
   const mutation = useMutation({
     queryKey: ['posts'],
-    mutationFn: (data)=>makeRequest.delete('/posts', data),
+    mutationFn: (data)=>{
+      console.log(data);
+      return makeRequest.post('/posts/delete', data)
+    },
     onSuccess: ()=>makeRequest.get('/posts').then((response)=>response.data),
   })
 
@@ -34,6 +37,8 @@ const Post = ({post}) => {
     const pictureUrl = picture ? picture.split('/').slice(-2).join('/') : null;
     return mutation.mutate({id, pictureUrl})
   }
+
+  console.log(typeof post.description);
 
   return (
     <div className='post'>
@@ -47,7 +52,7 @@ const Post = ({post}) => {
           </div>
         </div>
         <div className='right'>
-          <MoreVertIcon />
+          {/* <MoreVertIcon /> */}
           <Delete className='delete-post' onClick={()=>deletePost(post)} />
         </div>
       </div>
