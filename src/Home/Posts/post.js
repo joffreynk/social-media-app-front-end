@@ -25,7 +25,7 @@ const Post = ({post}) => {
 
   const mutation = useMutation({
     queryKey: ['posts'],
-    mutationFn: (data)=>makeRequest.post('/posts/delete', data),
+    mutationFn: (data)=>makeRequest.delete('/posts', data),
     onSuccess: ()=>makeRequest.get('/posts').then((response)=>response.data),
   })
 
