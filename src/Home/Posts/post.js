@@ -4,12 +4,12 @@ import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Delete } from '@mui/icons-material';
-
-import { useContext, useEffect, useState } from 'react'
-import { AuthContext } from '../../context/authContext'
-import { Link } from 'react-router-dom';
-import Comments from './comments/Comments.js';
 import { useMutation } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react'
+
+import { AuthContext } from '../../context/authContext'
+import Comments from './comments/Comments.js';
 import { makeRequest } from '../../context/requests';
 
 const Post = ({post}) => {
@@ -24,14 +24,15 @@ const Post = ({post}) => {
 
 
   const mutation = useMutation({
-    mutationFn: (data)=>makeRequest.delete('/posts', data),
-    onSuccess: (data)=>makeRequest.get('/posts').then(response=>response.data)
+    queryKey: ['posts'],
+    mutationFn: (data)=>makeRequest.post('/posts/delete', data),
+    onSuccess: ()=>makeRequest.get('/posts').then((response)=>response.data),
   })
 
   const deletePost = (post) => {
     const {id, picture } = post;
     const pictureUrl = picture ? picture.split('/').slice(-2).join('/') : null;
-    mutation.mutate({id, pictureUrl})
+    return mutation.mutate({id, pictureUrl})
   }
 
   return (

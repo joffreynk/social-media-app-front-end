@@ -11,6 +11,7 @@ const CreatePost = () => {
   const [postData, setPostData] = useState({description:null, postImage:null})
 
   const mutation = useMutation({
+    queryKey: ['posts'],
     mutationFn: (data) => {
       console.log(postData)
       const formData = new FormData()
