@@ -9,6 +9,8 @@ import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/authContext'
 import { Link } from 'react-router-dom';
 import Comments from './comments/Comments.js';
+import { useMutation } from '@tanstack/react-query';
+import { makeRequest } from '../../context/requests';
 
 const Post = ({post}) => {
 
@@ -20,9 +22,16 @@ const Post = ({post}) => {
     localStorage.setItem('liked', liked)
   }, [liked])
 
-  const deletePost = (id, url) => {
-    const pictureUrl = url.split('/').slice(-2).join('/')
-    console.log(id, '  :  ', pictureUrl);
+
+  const mutation = useMutation({
+    mutationFn: (data)=>makeRequest.delete('/posts', data),
+    onSuccess: (data)=>makeRequest.get('/posts').then(response=>response.data)
+  })
+
+  const deletePost = (post) => {
+    const {id, picture } = post;
+    const pictureUrl = picture ? picture.split('/').slice(-2).join('/') : null;
+    mutation.mutate({id, pictureUrl})
   }
 
   return (
@@ -38,12 +47,12 @@ const Post = ({post}) => {
         </div>
         <div className='right'>
           <MoreVertIcon />
-          <Delete className='delete-post' onClick={()=>deletePost(post.id, post.picture)} />
+          <Delete className='delete-post' onClick={()=>deletePost(post)} />
         </div>
       </div>
       <div className='post-info'>
-        <p>{post.description}</p>
-        <img src={post.picture} alt={post.title} />
+        {post.description && <p>{post.description}</p>}
+        {post.picture && <img src={post.picture} alt={post.title} />}
       </div>
       <div className='reactions'>
         <div className='icons'>
