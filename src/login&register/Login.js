@@ -12,7 +12,7 @@ import { AuthContext } from "../context/authContext";
 
 import "./login&register.css";
 import "./Login.css";
-import url from "../context/url";
+import { makeRequest } from "../context/requests";
 
 const schema = yup.object({
   userName: yup.string().min(2).required(),
@@ -27,17 +27,7 @@ const Login = () => {
   const [loginError, setLoginError] = useState(null)
   
   const handleLogin  = (data) => {
-    console.log('handle login')
-    const options = {
-      mode: 'cors',
-      withCredentials: true,
-      headers:{
-        'content-type': 'application/json',
-        'username': data.userName,
-        'password': data.password,
-      },
-    }
-    axios.get(`${url}/auth`, options)
+    makeRequest.post('/auth', data)
     .then(res=>{
       login(res.data)
       setLoginError(null)
@@ -46,6 +36,7 @@ const Login = () => {
       if(error.response && error.response.data){
         setLoginError( error.response.data.message)
       }else{
+        console.log(error);
         setLoginError( error.message)
       }
     })
