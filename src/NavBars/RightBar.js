@@ -5,7 +5,7 @@ import './rightBar.css'
 
 import passportImage from '../images/passport.png'
 import { makeRequest } from '../context/requests'
-import { AuthContext } from '../../context/authContext'
+import { AuthContext } from '../context/authContext'
 
 const RightBar = () => {
   const {isLoading, isError, data } = useQuery({
@@ -14,10 +14,10 @@ const RightBar = () => {
   })
 
   const folllow  = useMutation({
-    mutationFn: () =>makeRequest.post('users')
+    mutationFn: (data) =>makeRequest.post('follow', data)
   })
 
-  const currentUser = useContext(AuthContext)
+  const currentUser = useContext(AuthContext).currentUser
 
   return (
     <div className='rightBar'>
@@ -38,11 +38,11 @@ const RightBar = () => {
                 data.sort(() => (Math.random() > .5) ? 1 : -1).slice(-4).map(user=>(
                 <div key={`${user.id}_${user.userName}_${Math.floor(Math.random()*10000)}`} className='user'>
                   <div className='user-info'>
-                    <img src={user.profilePicture ? user.profilePicture : passportImage} alt='passport' />
+                    <img src={user.profilePicture ? user.profilePicture : currentUser.profilePicture} alt='passport' />
                     <span>{user.userName}</span>
                   </div>
                   <div className='user-buttons'>
-                    <button className='follow' onClick={}>Follow</button>
+                    <button className='follow' onClick={()=>{folllow.mutate({followerId: currentUser.id, followedId: user.id})}}>Follow</button>
                     <button className='dismiss'>Dismiss</button>
                   </div>
                 </div>)) 
