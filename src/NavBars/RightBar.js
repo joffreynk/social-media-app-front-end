@@ -43,7 +43,6 @@ const RightBar = () => {
                   </div>
                   <div className='user-buttons'>
                     <button className='follow' onClick={()=>{folllow.mutate({followerId: currentUser.id, followedId: user.id})}}>Follow</button>
-                    <button className='dismiss'>Dismiss</button>
                   </div>
                 </div>)) 
               : 'No suggestions exist' 
