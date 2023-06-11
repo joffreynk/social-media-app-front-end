@@ -13,11 +13,18 @@ const RightBar = () => {
     queryFn: () =>makeRequest.get('users').then(res => res.data),
   })
 
+  const {isLoading: isloadingFollower,  data: mydata } = useQuery({
+    queryKey: ['users'],
+    queryFn: () =>makeRequest.get('follow').then(res => res.data),
+  })
+
   const folllow  = useMutation({
-    mutationFn: (data) =>makeRequest.post('follow', data)
+    mutationFn: (data) =>makeRequest.post('follow', data),
   })
 
   const currentUser = useContext(AuthContext).currentUser
+
+  console.log('unFollowing', mydata);
 
   return (
     <div className='rightBar'>
