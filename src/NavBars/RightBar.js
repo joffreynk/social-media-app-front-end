@@ -42,7 +42,7 @@ const RightBar = () => {
                     <span>{user.userName}</span>
                   </div>
                   <div className='user-buttons'>
-                    <button className='follow' onClick={()=>{folllow.mutate({followerId: currentUser.id, followedId: user.id})}}>Follow</button>
+                    <button className='follow' onClick={()=>{folllow.mutate({followedId: user.id})}}>Follow</button>
                   </div>
                 </div>)) 
               : 'No suggestions exist' 
@@ -184,7 +184,7 @@ last activities section
               data.sort(() => (Math.random() > .5) ? 1 : -1).map(user=>(
           <div key={`${user.id}_${user.userName}_${Math.floor(Math.random()*1000)}`} className='user'>
             <div className='user-info online'>
-              <img src={user.profilePicture ? user.profilePicture : passportImage} alt='passport' />
+            <img src={user.profilePicture ? user.profilePicture : currentUser.profilePicture} alt='passport' />
               <span>{user.userName}</span>
               <span className='online-status'></span>
             </div>
