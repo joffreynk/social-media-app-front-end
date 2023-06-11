@@ -13,8 +13,6 @@ const Posts = () => {
     queryFn: () => makeRequest.get('/posts').then( (res) => res.data),
   })
 
-  console.log(data);
-
   if (isLoading) return 'Loading POSTS';
 
   if (error) return 'Failed to fetch posts, please try again';
