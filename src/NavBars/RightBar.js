@@ -14,7 +14,7 @@ const RightBar = () => {
   })
 
   const {isLoading: isloadingFollower,  data: mydata } = useQuery({
-    queryKey: ['users'],
+    queryKey: ['follow'],
     queryFn: () =>makeRequest.get('follow').then(res => res.data),
   })
 
