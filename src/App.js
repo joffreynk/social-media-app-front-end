@@ -14,9 +14,7 @@ import { AuthContext } from './context/authContext';
 function App() {
   const {currentUser}  = useContext(AuthContext);
   const {darkMode} = useContext(darkModeContext)
-  console.log(darkMode);
 
-  
   const ProtectedRoutes = ({children}) => {
     if(!currentUser) return <Navigate to="/login" />;
   

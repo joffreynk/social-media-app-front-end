@@ -13,9 +13,9 @@ const RightBar = () => {
     queryFn: () =>makeRequest.get('users').then(res => res.data),
   })
 
-  const {isLoading: isloadingFollower,  data: mydata } = useQuery({
+  const {isLoading: isloadingSuggestions,  isError: isSuggestionsError, data: suggestions } = useQuery({
     queryKey: ['follow'],
-    queryFn: () =>makeRequest.get('follow').then(res => res.data),
+    queryFn: () =>makeRequest.get('follow/suggestions').then(res => res.data),
   })
 
   const folllow  = useMutation({
@@ -24,7 +24,7 @@ const RightBar = () => {
 
   const currentUser = useContext(AuthContext).currentUser
 
-  console.log('unFollowing', mydata);
+  console.log('unFollowing', suggestions);
 
   return (
     <div className='rightBar'>
@@ -34,15 +34,15 @@ const RightBar = () => {
 
         <div className='item'>
           <span>Sugestions for you</span>
-          {isLoading ?
+          {isloadingSuggestions ?
            <p>Loading suggestions</p>
             : 
-            isError
+            isSuggestionsError
              ? 
              <p>Failed to fetch friends suggestions</p>
               : 
-              data.length ?
-                data.sort(() => (Math.random() > .5) ? 1 : -1).slice(-4).map(user=>(
+              suggestions.length ?
+              suggestions.sort(() => (Math.random() > .5) ? 1 : -1).slice(-4).map(user=>(
                 <div key={`${user.id}_${user.userName}_${Math.floor(Math.random()*10000)}`} className='user'>
                   <div className='user-info'>
                     <img src={user.profilePicture ? user.profilePicture : currentUser.profilePicture} alt='passport' />
