@@ -22,7 +22,7 @@ const Posts = () => {
     <div className='posts'>
       <CreatePost />
      {
-      data.length? data.map(post => <Post post={post} key={post.id} /> ): "oops you don't have any post from you or your followers"
+      data.length? data.map(post => <Post post={post} key={`${post.id}-${post.createdAt }`} /> ): "oops you don't have any post from you or your followers"
      }
 
     </div>
