@@ -25,6 +25,7 @@ const RightBar = () => {
   const currentUser = useContext(AuthContext).currentUser
 
   console.log('unFollowing', suggestions);
+  console.log('Current user', currentUser);
 
   return (
     <div className='rightBar'>
@@ -49,7 +50,8 @@ const RightBar = () => {
                     <span>{user.userName}</span>
                   </div>
                   <div className='user-buttons'>
-                    <button className='follow' onClick={()=>{folllow.mutate({followedId: user.id})}}>Follow</button>
+                    {Number(currentUser.id) === Number(user.followed) ? <button className='follow-back' onClick={()=>{folllow.mutate({followedId: user.id})}}>Follow Back</button>  : <button className='follow' onClick={()=>{folllow.mutate({followedId: user.id})}}>Follow</button>}
+                    
                   </div>
                 </div>)) 
               : 'No suggestions exist' 
