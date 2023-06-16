@@ -22,6 +22,10 @@ const RightBar = () => {
     mutationFn: (data) =>makeRequest.post('follow', data),
   })
 
+  const folllowBack  = useMutation({
+    mutationFn: (data) =>makeRequest.put('follow', data),
+  })
+
   const currentUser = useContext(AuthContext).currentUser
 
   console.log('unFollowing', suggestions);
@@ -50,7 +54,7 @@ const RightBar = () => {
                     <span>{user.userName}</span>
                   </div>
                   <div className='user-buttons'>
-                    {Number(currentUser.id) === Number(user.followed) ? <button className='follow-back' onClick={()=>{folllow.mutate({followedId: user.id})}}>Follow Back</button>  : <button className='follow' onClick={()=>{folllow.mutate({followedId: user.id})}}>Follow</button>}
+                    {Number(currentUser.id) === Number(user.followed) ? <button className='follow-back' onClick={()=>{folllowBack.mutate({follower: user.id, followingId: user.followingId})}}>Follow Back</button>  : <button className='follow' onClick={()=>{folllow.mutate({followedId: user.id})}}>Follow</button>}
                     
                   </div>
                 </div>)) 
