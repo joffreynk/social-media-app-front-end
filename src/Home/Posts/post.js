@@ -17,14 +17,7 @@ import { makeRequest } from '../../context/requests';
 const Post = ({post}) => {
 
   const {currentUser}  = useContext(AuthContext);
-  // const [liked, setLiked] = useState(JSON.parse(localStorage.getItem('liked')) || false)
   const [toggleComments, setToggleComments] = useState(false)
-
-  // useEffect(()=>{
-  //   localStorage.setItem('liked', liked)
-  // }, [liked])
-
-
 
   const deletePostMutation = useMutation({
     queryKey: ['posts'],
