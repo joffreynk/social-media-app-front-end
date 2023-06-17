@@ -59,6 +59,8 @@ const Post = ({post}) => {
     queryFn: () =>makeRequest.get(`likes/${post.id}`).then((response) => response.data).catch((error) =>error.message)
   })
 
+  const myLikeId = likes && likes.length && likes.filter(like => like.userId === currentUser.id)[0] && likes.filter(like => like.userId === currentUser.id)[0].id
+
   return (
     <div className='post'>
       <div className='user'>
@@ -85,7 +87,7 @@ const Post = ({post}) => {
             isLikesLoading? 'Loading likes' : 
             isLikesError? 'Error loading' :
             <div>
-              {likes && likes.length && likes.filter(like => like.userId === currentUser.id)[0] && likes.filter(like => like.userId === currentUser.id)[0].id ? <FavoriteOutlinedIcon onClick={()=>{disLikePost.mutate({postId: post.id})}} /> : < FavoriteBorderOutlinedIcon  onClick={()=>{likePost.mutate({postId: post.id})}} /> }
+              { myLikeId? <FavoriteOutlinedIcon onClick={()=>{disLikePost.mutate({postId: post.id, likeId: myLikeId})}} /> : < FavoriteBorderOutlinedIcon  onClick={()=>{likePost.mutate({postId: post.id})}} /> }
               <span>{likes.length} </span>
               <span className='icon-text'>Likes</span>
             </div>
