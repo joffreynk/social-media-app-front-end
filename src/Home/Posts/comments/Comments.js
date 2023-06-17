@@ -1,28 +1,40 @@
-import { useContext } from 'react'
+import { useMutation } from '@tanstack/react-query';
+import { useContext, useState } from 'react'
+
+
 import Comment from './Comment'
-
-import comments from '../../data.js'
-
 import './comments.css'
 import { AuthContext } from '../../../context/authContext';
+import { makeRequest } from '../../../context/requests';
 
 
-const Comments = () => {
+const Comments = ({comments, postId}) => {
   const {currentUser}  = useContext(AuthContext);
+  const [createCommnet, setCreateComment] = useState('')
+  const [CommnetError, setCommnetError] = useState(null)
+
+  const addComment = useMutation({
+    queryKey: ['comments'],
+    mutationFn: (data)=>{
+      return makeRequest.post('/comments', data)
+    },
+  })
+
   return (
     <div className='comments'>
+          {CommnetError && <span style={{color:'red', alignSelf:'center', marginBottom: '-15px'}}>{CommnetError}</span>}
       <div className='comment'>
-
         <div className='cleft'>
           <img src={currentUser.profilePicture} alt="hello world " />
           <div className='cinput'>
-            <textarea ></textarea>
+            <textarea value={createCommnet} placeholder='what do you think about this post?' onChange={(e)=>setCreateComment(e.target.value)} ></textarea>
           </div>
         </div>
 
-
         <div className='cright'>
-          <button>Send</button>
+          <button onClick={()=>{
+            createCommnet.length<2? setCommnetError('please write you thought!!!!!') : addComment.mutate({comment: createCommnet, postId: postId})
+          }} >Send</button>
         </div>
       </div>
 

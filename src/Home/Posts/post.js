@@ -52,7 +52,7 @@ const Post = ({post}) => {
   })
 
   const {isError: isCommentsError, isLoading: isCommentsLoading, data: comments} = useQuery({
-    queryKey: [`likes${post.id}`],
+    queryKey: [`comments${post.id}`],
     queryFn: () =>makeRequest.get(`comments/${post.id}`).then((response) => response.data).catch((error) =>error.message)
   })
 
@@ -106,7 +106,7 @@ const Post = ({post}) => {
           <span className='icon-text'>Shares</span>
         </div>
       </div>
-      {toggleComments && <Comments/>}
+      {toggleComments && <Comments comments={comments} postId={post.id} />}
     </div>
   )
 }
