@@ -198,7 +198,7 @@ last activities section
           <div key={`${user.id}_${user.userName}_${Math.floor(Math.random()*1000)}`} className='user'>
             <div className='user-info online'>
             <img src={user.profilePicture ? user.profilePicture : currentUser.profilePicture} alt='passport' />
-              <span>{user.userName}</span>
+            <span>{user.firstName} <span>{user.lastName}</span> </span>
               <span className='online-status'></span>
             </div>
           </div>

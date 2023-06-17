@@ -6,7 +6,9 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Delete } from '@mui/icons-material';
 import { useMutation } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react';
+
+import ReactTimeAgo from 'react-time-ago'
 
 import { AuthContext } from '../../context/authContext'
 import Comments from './comments/Comments.js';
@@ -23,12 +25,27 @@ const Post = ({post}) => {
   }, [liked])
 
 
+
   const mutation = useMutation({
     queryKey: ['posts'],
     mutationFn: (data)=>{
       return makeRequest.post('/posts/delete', data)
     },
     onSuccess: ()=>makeRequest.get('/posts').then((response)=>response.data),
+  })
+
+  const likePost = useMutation({
+    queryKey: ['likes'],
+    mutationFn: (data)=>{
+      return makeRequest.post('/likes', data)
+    },
+  })
+
+  const disLikePost = useMutation({
+    queryKey: ['likes'],
+    mutationFn: (data)=>{
+      return makeRequest.put('/likes', data)
+    },
   })
 
   const deletePost = (post) => {
@@ -45,7 +62,7 @@ const Post = ({post}) => {
           <div className='post-status'>
 
             <span><Link to={`/profile/${currentUser.id}`} >{currentUser.name}</Link> </span>
-            <span className='date'>1 minute ago</span>
+            <span className='date'>1 minute ago <ReactTimeAgo date={new Date(post.createdAt)} local="en-US"/></span>
           </div>
         </div>
         <div className='right'>
