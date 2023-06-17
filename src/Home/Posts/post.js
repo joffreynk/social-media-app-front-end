@@ -59,6 +59,11 @@ const Post = ({post}) => {
     queryFn: () =>makeRequest.get(`likes/${post.id}`).then((response) => response.data).catch((error) =>error.message)
   })
 
+  const {isError: isCommentsError, isLoading: isCommentsLoading, data: comments} = useQuery({
+    queryKey: [`likes${post.id}`],
+    queryFn: () =>makeRequest.get(`likes/${post.id}`).then((response) => response.data).catch((error) =>error.message)
+  })
+
   const myLikeId = likes && likes.length && likes.filter(like => like.userId === currentUser.id)[0] && likes.filter(like => like.userId === currentUser.id)[0].id
 
   return (
@@ -94,11 +99,15 @@ const Post = ({post}) => {
           }
 
         </div>
+        {
+            isCommentsLoading? 'Loading comments.....' : 
+            isCommentsError? 'Failed to load comments.....' :
         <div className='icons' onClick={()=>setToggleComments(!toggleComments)}>
           <TextsmsOutlinedIcon />
-          <span>10</span>
+          <span>{comments.length}</span>
           <span className='icon-text'>Comments</span>
         </div>
+          }
         <div className='icons'>
           <ShareOutlinedIcon />
           <span>7</span>
