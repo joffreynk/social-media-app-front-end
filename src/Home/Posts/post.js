@@ -4,7 +4,7 @@ import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Delete } from '@mui/icons-material';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 
@@ -17,12 +17,12 @@ import { makeRequest } from '../../context/requests';
 const Post = ({post}) => {
 
   const {currentUser}  = useContext(AuthContext);
-  const [liked, setLiked] = useState(JSON.parse(localStorage.getItem('liked')) || false)
+  // const [liked, setLiked] = useState(JSON.parse(localStorage.getItem('liked')) || false)
   const [toggleComments, setToggleComments] = useState(false)
 
-  useEffect(()=>{
-    localStorage.setItem('liked', liked)
-  }, [liked])
+  // useEffect(()=>{
+  //   localStorage.setItem('liked', liked)
+  // }, [liked])
 
 
 
@@ -54,6 +54,12 @@ const Post = ({post}) => {
     return mutation.mutate({id, pictureUrl})
   }
 
+  const {isError: isLikesError, isLoading: isLikesLoading, data: likes} = useQuery({
+    queryFn: () =>makeRequest.get('likes').then((response) => response.data).catch((error) =>error.message)
+  })
+
+  const liked = likes.filter(like => like.userId === currentUser.id)[0].id
+
   return (
     <div className='post'>
       <div className='user'>
@@ -62,7 +68,7 @@ const Post = ({post}) => {
           <div className='post-status'>
 
             <span><Link to={`/profile/${currentUser.id}`} >{currentUser.name}</Link> </span>
-            <span className='date'>1 minute ago <ReactTimeAgo date={new Date(post.createdAt)} local="en-US"/></span>
+            <span className='date'><ReactTimeAgo date={new Date(post.createdAt)} locale="en-US"/></span>
           </div>
         </div>
         <div className='right'>
@@ -76,7 +82,7 @@ const Post = ({post}) => {
       </div>
       <div className='reactions'>
         <div className='icons'>
-          {!liked ? <FavoriteBorderOutlinedIcon onClick={()=>setLiked(!liked)} /> : <FavoriteOutlinedIcon onClick={()=>setLiked(!liked)} /> }
+          {!likes.filter(like => like.userId === currentUser.id)[0] &&likes.filter(like => like.userId === currentUser.id)[0].id ? <FavoriteBorderOutlinedIcon onClick={()=>{likePost.mutate({postId: post.id})}} /> : <FavoriteOutlinedIcon onClick={()=>{disLikePost.mutate({postId: post.id})}} /> }
           
           <span>15</span>
           <span className='icon-text'>Likes</span>
