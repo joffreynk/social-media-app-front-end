@@ -23,4 +23,5 @@ const Comment = ({comment, currentUser}) => {
   )
 }
 
+
 export default Comment
