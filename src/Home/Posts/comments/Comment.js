@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ReactTimeAgo from 'react-time-ago';
 
 const Comment = ({comment, currentUser}) => {
 
@@ -15,7 +16,7 @@ const Comment = ({comment, currentUser}) => {
 
       <div className='cright'>
         <span>
-          1 minute ago
+        <ReactTimeAgo date={new Date(comment.createdAt)} locale="en-US"/>
         </span>
       </div>
     </div>
