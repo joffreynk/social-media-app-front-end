@@ -2,11 +2,10 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Delete } from '@mui/icons-material';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 
 import ReactTimeAgo from 'react-time-ago'
 
@@ -54,7 +53,7 @@ const Post = ({post}) => {
 
   const {isError: isCommentsError, isLoading: isCommentsLoading, data: comments} = useQuery({
     queryKey: [`likes${post.id}`],
-    queryFn: () =>makeRequest.get(`likes/${post.id}`).then((response) => response.data).catch((error) =>error.message)
+    queryFn: () =>makeRequest.get(`comments/${post.id}`).then((response) => response.data).catch((error) =>error.message)
   })
 
   const myLikeId = likes && likes.length && likes.filter(like => like.userId === currentUser.id)[0] && likes.filter(like => like.userId === currentUser.id)[0].id
