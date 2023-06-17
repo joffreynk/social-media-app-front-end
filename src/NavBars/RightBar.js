@@ -51,7 +51,7 @@ const RightBar = () => {
                 <div key={`${user.id}_${user.userName}_${Math.floor(Math.random()*10000)}`} className='user'>
                   <div className='user-info'>
                     <img src={user.profilePicture ? user.profilePicture : currentUser.profilePicture} alt='passport' />
-                    <span>{user.userName}</span>
+                    <span>{user.firstName} <span>{user.lastName}</span> </span>
                   </div>
                   <div className='user-buttons'>
                     {Number(currentUser.id) === Number(user.followed) ? <button className='follow-back' onClick={()=>{folllowBack.mutate({follower: user.id, followingId: user.followingId})}}>Follow Back</button>  : <button className='follow' onClick={()=>{folllow.mutate({followedId: user.id})}}>Follow</button>}
