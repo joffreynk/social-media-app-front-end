@@ -26,7 +26,7 @@ const Post = ({post}) => {
 
 
 
-  const mutation = useMutation({
+  const deletePostMutation = useMutation({
     queryKey: ['posts'],
     mutationFn: (data)=>{
       return makeRequest.post('/posts/delete', data)
@@ -51,12 +51,12 @@ const Post = ({post}) => {
   const deletePost = (post) => {
     const {id, picture } = post;
     const pictureUrl = picture ? picture.split('/').slice(-2).join('/') : null;
-    return mutation.mutate({id, pictureUrl})
+    return deletePostMutation.mutate({id, pictureUrl})
   }
 
   const {isError: isLikesError, isLoading: isLikesLoading, data: likes} = useQuery({
-    queryKey: ['likes'],
-    queryFn: () =>makeRequest.get('likes').then((response) => response.data).catch((error) =>error.message)
+    queryKey: [`likes${post.id}`],
+    queryFn: () =>makeRequest.get(`likes/${post.id}`).then((response) => response.data).catch((error) =>error.message)
   })
 
   return (
@@ -85,8 +85,8 @@ const Post = ({post}) => {
             isLikesLoading? 'Loading likes' : 
             isLikesError? 'Error loading' :
             <div>
-              {likes && likes.length && likes.filter(like => like.userId === currentUser.id)[0] && likes.filter(like => like.userId === currentUser.id)[0].id ? <FavoriteBorderOutlinedIcon onClick={()=>{likePost.mutate({postId: post.id})}} /> : <FavoriteOutlinedIcon onClick={()=>{disLikePost.mutate({postId: post.id})}} /> }
-              <span>15</span>
+              {likes && likes.length && likes.filter(like => like.userId === currentUser.id)[0] && likes.filter(like => like.userId === currentUser.id)[0].id ? <FavoriteOutlinedIcon onClick={()=>{disLikePost.mutate({postId: post.id})}} /> : < FavoriteBorderOutlinedIcon  onClick={()=>{likePost.mutate({postId: post.id})}} /> }
+              <span>{likes.length} </span>
               <span className='icon-text'>Likes</span>
             </div>
           }
