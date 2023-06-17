@@ -55,10 +55,9 @@ const Post = ({post}) => {
   }
 
   const {isError: isLikesError, isLoading: isLikesLoading, data: likes} = useQuery({
+    queryKey: ['likes'],
     queryFn: () =>makeRequest.get('likes').then((response) => response.data).catch((error) =>error.message)
   })
-
-  const liked = likes.filter(like => like.userId === currentUser.id)[0].id
 
   return (
     <div className='post'>
@@ -67,7 +66,7 @@ const Post = ({post}) => {
           <img src={currentUser.profilePicture} alt="hello world " />
           <div className='post-status'>
 
-            <span><Link to={`/profile/${currentUser.id}`} >{currentUser.name}</Link> </span>
+            <span><Link to={`/profile/${currentUser.id}`} >{currentUser.firstName}</Link> </span>
             <span className='date'><ReactTimeAgo date={new Date(post.createdAt)} locale="en-US"/></span>
           </div>
         </div>
@@ -82,10 +81,16 @@ const Post = ({post}) => {
       </div>
       <div className='reactions'>
         <div className='icons'>
-          {!likes.filter(like => like.userId === currentUser.id)[0] &&likes.filter(like => like.userId === currentUser.id)[0].id ? <FavoriteBorderOutlinedIcon onClick={()=>{likePost.mutate({postId: post.id})}} /> : <FavoriteOutlinedIcon onClick={()=>{disLikePost.mutate({postId: post.id})}} /> }
-          
-          <span>15</span>
-          <span className='icon-text'>Likes</span>
+          {
+            isLikesLoading? 'Loading likes' : 
+            isLikesError? 'Error loading' :
+            <div>
+              {likes && likes.length && likes.filter(like => like.userId === currentUser.id)[0] && likes.filter(like => like.userId === currentUser.id)[0].id ? <FavoriteBorderOutlinedIcon onClick={()=>{likePost.mutate({postId: post.id})}} /> : <FavoriteOutlinedIcon onClick={()=>{disLikePost.mutate({postId: post.id})}} /> }
+              <span>15</span>
+              <span className='icon-text'>Likes</span>
+            </div>
+          }
+
         </div>
         <div className='icons' onClick={()=>setToggleComments(!toggleComments)}>
           <TextsmsOutlinedIcon />
