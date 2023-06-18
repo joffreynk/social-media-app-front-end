@@ -62,10 +62,12 @@ const Post = ({post}) => {
     <div className='post'>
       <div className='user'>
         <div className='left'>
-          <img src={currentUser.profilePicture} alt="hello world " />
+        <Link to={`/profile/${post.userName}`} >
+          <img src={post.profilePicture? post.profilePicture: currentUser.defaultPicture} alt="hello world " />
+          </Link>
           <div className='post-status'>
 
-            <span><Link to={`/profile/${currentUser.id}`} >{currentUser.firstName}</Link> </span>
+            <span><Link to={`/profile/${post.userName}`} >{post.firstName}</Link> </span>
             <span className='date'><ReactTimeAgo date={new Date(post.createdAt)} locale="en-US"/></span>
           </div>
         </div>

@@ -6,7 +6,7 @@ const AuthContextProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('socialMediaAppToken')) || null);
 
     const login = (data) => {
-      setCurrentUser(data)
+      setCurrentUser({...data, defaultPicture: 'http://localhost:8000/1686467578870_avatar.png'})
   }
 
     useEffect(() => {

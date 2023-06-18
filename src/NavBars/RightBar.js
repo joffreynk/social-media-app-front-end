@@ -28,9 +28,6 @@ const RightBar = () => {
 
   const currentUser = useContext(AuthContext).currentUser
 
-  console.log('unFollowing', suggestions);
-  console.log('Current user', currentUser);
-
   return (
     <div className='rightBar'>
       <div className='container'>

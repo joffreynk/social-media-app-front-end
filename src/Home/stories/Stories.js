@@ -33,9 +33,6 @@ const Stories = () => {
     }
   };
 
-  console.log('alll stories',allStories);
-
-
   return (
     <div className='stories'>
       <div className='story'>
