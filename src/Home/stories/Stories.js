@@ -4,37 +4,36 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context/authContext';
 import './stories.css'
 
-import stories from '../data.js'
 import { makeRequest } from '../../context/requests';
 
 const Stories = () => {
 
-  const {currentUser}  = useContext(AuthContext);
-  const story = useRef(null)
+    const {currentUser}  = useContext(AuthContext);
+    const story = useRef(null)
 
-  const createStory = useMutation({
-    mutationKey: ['stories'],
-    mutationFn: (data)=>makeRequest.post('stories', data)
-  })
+    const createStory = useMutation({
+      mutationKey: ['stories'],
+      mutationFn: (data)=>makeRequest.post('stories', data)
+    })
 
-  const {isError: isStoriesError, isLoading: isStoriesLoading, data: allStories} = useQuery({
-    queryKey: ['stories'],
-    queryFn: ()=>makeRequest.get('stories').then(response=>response.data).catch(error=>error.message)
-  })
+    const {isError: isStoriesError, isLoading: isStoriesLoading, data: allStories} = useQuery({
+      queryKey: ['stories'],
+      queryFn: ()=>makeRequest.get('stories').then((response)=>response.data).catch((error)=>error.message)
+    })
 
 
 
-  const handleFileUpload = e => {
-    story.current.click()
-  const file = story.current.files[0];
-  if (file){
-    const formData = new FormData();
-    formData.set('story', file);
-    createStory.mutate(formData)
-  }
-};
+    const handleFileUpload = e => {
+      story.current.click()
+    const file = story.current.files[0];
+    if (file){
+      const formData = new FormData();
+      formData.set('story', file);
+      createStory.mutate(formData)
+    }
+  };
 
-console.log(allStories);
+  console.log('alll stories',allStories);
 
 
   return (
@@ -53,10 +52,12 @@ console.log(allStories);
         <button onClick={handleFileUpload}>+</button>
       </div>
       {
-        stories.map(story=>(
+        isStoriesLoading ? 'Loading stories........':
+        isStoriesError ? 'Failed to load stories':
+        allStories.map(story=>(
           <div className='story' key={story.id}>
-            <img src={story.img} alt={story.brand} />
-            <span>{story.name}</span>
+            <img src={story.storyPicture} alt={story.brand} />
+            <span>{story.description}</span>
           </div>
         ))
       }
