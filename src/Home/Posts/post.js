@@ -23,7 +23,7 @@ const Post = ({post}) => {
     mutationFn: (data)=>{
       return makeRequest.post('/posts/delete', data)
     },
-    onSuccess: ()=>makeRequest.get('/posts').then((response)=>response.data),
+    onSuccess: () =>clientQuery.invalidateQueries({ queryKey: ['posts'] }),
   })
 
   const likePost = useMutation({
