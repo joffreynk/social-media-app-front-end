@@ -3,7 +3,7 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import { Delete } from '@mui/icons-material';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 
@@ -14,6 +14,7 @@ import Comments from './comments/Comments.js';
 import { makeRequest } from '../../context/requests';
 
 const Post = ({post}) => {
+  const clientQuery = useQueryClient();
 
   const {currentUser}  = useContext(AuthContext);
   const [toggleComments, setToggleComments] = useState(false)
@@ -27,16 +28,22 @@ const Post = ({post}) => {
   })
 
   const likePost = useMutation({
-    queryKey: ['likes'],
+    queryKey: [`likes_${post.id}`],
     mutationFn: (data)=>{
       return makeRequest.post('/likes', data)
+    },
+    onSuccess: () => {
+      clientQuery.invalidateQueries({ queryKey: [`likes_${post.id}`] });
     },
   })
 
   const disLikePost = useMutation({
-    queryKey: ['likes'],
+    queryKey: [`likes_${post.id}`],
     mutationFn: (data)=>{
       return makeRequest.put('/likes', data)
+    },
+    onSuccess: () => {
+      clientQuery.invalidateQueries({ queryKey: [`likes_${post.id}`] });
     },
   })
 
@@ -47,12 +54,12 @@ const Post = ({post}) => {
   }
 
   const {isError: isLikesError, isLoading: isLikesLoading, data: likes} = useQuery({
-    queryKey: [`likes${post.id}`],
+    queryKey: [`likes_${post.id}`],
     queryFn: () =>makeRequest.get(`likes/${post.id}`).then((response) => response.data).catch((error) =>error.message)
   })
 
   const {isError: isCommentsError, isLoading: isCommentsLoading, data: comments} = useQuery({
-    queryKey: [`comments${post.id}`],
+    queryKey: [`comments/${post.id}`],
     queryFn: () =>makeRequest.get(`comments/${post.id}`).then((response) => response.data).catch((error) =>error.message)
   })
 

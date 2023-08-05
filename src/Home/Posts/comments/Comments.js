@@ -1,4 +1,4 @@
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useContext, useState } from 'react'
 
 
@@ -13,10 +13,16 @@ const Comments = ({comments, postId}) => {
   const [createCommnet, setCreateComment] = useState('')
   const [CommnetError, setCommnetError] = useState(null)
 
+  const clientQuery = useQueryClient();
+
+
   const addComment = useMutation({
-    queryKey: ['comments'],
+    queryKey: [`comments/${postId}`],
     mutationFn: (data)=>{
       return makeRequest.post('/comments', data)
+    },
+    onSuccess: () => {
+      clientQuery.invalidateQueries({  queryKey: [`comments/${postId}`], });
     },
   })
 
