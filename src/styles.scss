@@ -1,3 +1,8 @@
+html, body {
+  max-width:1366px;
+  margin: 0 auto important!;
+}
+
 $themes: (
   light: (
     textColor: #000,
@@ -41,12 +46,12 @@ $themes: (
 }
 
 @mixin mobile {
-  @media (max-width: 480px) {
+  @media (max-width: 650px) {
     @content;
   }
 }
 @mixin tablet {
-  @media (max-width: 960px) {
+  @media (max-width: 1200px) {
     @content;
   }
 }

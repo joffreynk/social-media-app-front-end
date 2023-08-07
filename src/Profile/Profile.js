@@ -10,16 +10,23 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 import './profile.css'
-import profilePict from '../images/passport.png';
 import { Link } from 'react-router-dom';
 import Posts from '../Home/Posts/Posts';
+import { useContext } from 'react';
+import { AuthContext } from '../context/authContext';
 
 const Profile = () => {
+
+  const {currentUser} = useContext(AuthContext)
+
+  console.log('====================================');
+  console.log(currentUser);
+  console.log('====================================');
   return (
     <div className='profile'>
       <div className='images'>
         <img className='cover' src='https://imageio.forbes.com/specials-images/dam/imageserve/1034931427/960x0.jpg?format=jpg&width=960' alt='Profile' />
-        <img className='profilePict' src={profilePict} alt='Profile' />
+        <img className='profilePict' src={currentUser.profilePicture} alt='Profile' />
       </div>
       <div className='userContainer'>
         <div className='user'>
@@ -28,13 +35,14 @@ const Profile = () => {
             <Link to=''><InstagramIcon /> </Link>
             <Link to=''><TwitterIcon /> </Link>
             <Link to=''><LinkedInIcon /> </Link>
+            <Link to=''><GitHubIcon /> </Link>
             <Link to=''><PinterestIcon /> </Link>
           </div>
          <div className='center'>
-          <p>user Name</p>
+          <p>{currentUser.firstName} {" "} {currentUser.lastName}</p>
           <div className='location'>
           <Link to=''><LocationOnIcon fontSize='small' /> <span>Bujumbura</span> </Link>
-          <Link to=''><LanguageIcon fontSize='small' /><span>Joffrrey nk</span> </Link>
+          <Link to=''><LanguageIcon fontSize='small' /><span>website</span> </Link>
           </div>
           <button>Follow</button>
          </div>

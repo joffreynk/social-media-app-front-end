@@ -10,7 +10,7 @@ const Layout = () => {
   return (
     <QueryClientProvider client={clientQuery} >
         <HeaderBar />
-        <div style={{display:"flex", width: '100vw'}}>
+        <div style={{display:"flex"}}>
 
             <LeftBar />
 
