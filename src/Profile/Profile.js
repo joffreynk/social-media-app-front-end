@@ -15,13 +15,10 @@ import Posts from '../Home/Posts/Posts';
 import { useContext } from 'react';
 import { AuthContext } from '../context/authContext';
 
-const Profile = () => {
+const Profile = ({}) => {
 
   const {currentUser} = useContext(AuthContext)
 
-  console.log('====================================');
-  console.log(currentUser);
-  console.log('====================================');
   return (
     <div className='profile'>
       <div className='images'>
