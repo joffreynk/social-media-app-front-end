@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { useMutation, useQuery } from '@tanstack/react-query'
+import React, { useContext,  } from 'react'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 
 import './rightBar.css'
 
@@ -8,6 +8,7 @@ import { makeRequest } from '../context/requests'
 import { AuthContext } from '../context/authContext'
 
 const RightBar = () => {
+  const clientQuery = useQueryClient();
   const {isLoading, isError, data } = useQuery({
     queryKey: ['users'],
     queryFn: () =>makeRequest.get('users').then(res => res.data),
@@ -20,10 +21,12 @@ const RightBar = () => {
 
   const folllow  = useMutation({
     mutationFn: (data) =>makeRequest.post('follow', data),
-  })
+    onSuccess: () =>clientQuery.invalidateQueries({ queryKey: ['follow'] }),
+  });
 
   const folllowBack  = useMutation({
     mutationFn: (data) =>makeRequest.put('follow', data),
+     onSuccess: () =>clientQuery.invalidateQueries({ queryKey: ['follow'] }),
   })
 
   const currentUser = useContext(AuthContext).currentUser
@@ -44,7 +47,7 @@ const RightBar = () => {
              <p>Failed to fetch friends suggestions</p>
               : 
               suggestions.length ?
-              suggestions.sort(() => (Math.random() > .5) ? 1 : -1).slice(-4).map(user=>(
+              suggestions.map(user=>(
                 <div key={`${user.id}_${user.userName}_${Math.floor(Math.random()*10000)}`} className='user'>
                   <div className='user-info'>
                     <img src={user.profilePicture ? user.profilePicture : currentUser.profilePicture} alt='passport' />
@@ -55,7 +58,7 @@ const RightBar = () => {
                     
                   </div>
                 </div>)) 
-              : 'No suggestions exist' 
+              : 'No suggestions exist'
           }
         </div>
 
@@ -182,7 +185,7 @@ last activities section
 {/* online friends section */}
 
         <div className='item'>
-          <span>Last activities</span>
+          <span>Online users</span>
           {isLoading ?
            <p>Loading suggestions</p>
             : 
@@ -191,7 +194,7 @@ last activities section
              <p>Failed to fetch friends suggestions</p>
               : 
               data.length ?
-              data.sort(() => (Math.random() > .5) ? 1 : -1).map(user=>(
+              data.map(user=>(
           <div key={`${user.id}_${user.userName}_${Math.floor(Math.random()*1000)}`} className='user'>
             <div className='user-info online'>
             <img src={user.profilePicture ? user.profilePicture : currentUser.profilePicture} alt='passport' />
