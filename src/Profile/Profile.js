@@ -8,6 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LanguageIcon from '@mui/icons-material/Language';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import {useLocation} from "react-router-dom"
 
 import './profile.css'
 import { Link } from 'react-router-dom';
@@ -15,9 +16,10 @@ import Posts from '../Home/Posts/Posts';
 import { useContext } from 'react';
 import { AuthContext } from '../context/authContext';
 
-const Profile = ({}) => {
+const Profile = () => {
 
   const {currentUser} = useContext(AuthContext)
+  const location = useLocation().pathname.split('/')[2]
 
   return (
     <div className='profile'>
@@ -41,7 +43,10 @@ const Profile = ({}) => {
           <Link to=''><LocationOnIcon fontSize='small' /> <span>Bujumbura</span> </Link>
           <Link to=''><LanguageIcon fontSize='small' /><span>website</span> </Link>
           </div>
-          <button>Follow</button>
+          {
+            currentUser.userName===location?<button>Update</button>: <button>Follow</button>
+          }
+          
          </div>
          <div className='right'>
           <MailOutlineIcon />
