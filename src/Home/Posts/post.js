@@ -68,17 +68,16 @@ const Post = ({post}) => {
     <div className='post'>
       <div className='user'>
         <div className='left'>
-        <Link to={`/profile/${post.userName}`} >
-          <img src={post.profilePicture? post.profilePicture: currentUser.defaultPicture} alt="hello world " />
+        <Link to={`/profile/${post.userId}`} >
+          <img src={post.profilePicture? post.profilePicture: currentUser.defaultPicture} alt="Author profile" />
           </Link>
           <div className='post-status'>
 
-            <span><Link to={`/profile/${post.userName}`} >{post.firstName}</Link> </span>
+            <span><Link to={`/profile/${post.userId}`} >{post.firstName}</Link> </span>
             <span className='date'><ReactTimeAgo date={new Date(post.createdAt)} locale="en-US"/></span>
           </div>
         </div>
         <div className='right'>
-          {/* <MoreVertIcon /> */}
           {currentUser.id === post.userId && <Delete className='delete-post' onClick={()=>deletePost(post)} />}
         </div>
       </div>
